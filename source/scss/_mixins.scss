@@ -1,0 +1,24 @@
+// Custom mixins
+
+@mixin font($font-name, $file-name, $weight, $style) {
+    @font-face {
+        font-family: $font-name;
+        font-display: swap;
+        src: url("../fonts/#{$file-name}.woff") format("woff"),
+            url("../fonts/#{$file-name}.woff") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
