@@ -44,7 +44,7 @@
     position: relative;
 
     height: 100vh;
-    min-height: 729px;
+    min-height: 629px;
   }
 
   .page-header__background {
@@ -92,6 +92,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    min-height: 729px;
+  }
+
   .page-header__background {
     background-image: url(../img/bg/bg-desktop.jpg);
   }
