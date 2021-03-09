@@ -2,18 +2,23 @@
 
 <header class="page-header">
   <nav class="page-header__nav main-nav">
-    <a class="main-nav__logo">
-      <picture>
-        <source media="(min-width: 1200px)" srcset="img/svg/logo-desktop.svg">
-        <source media="(min-width: 660px)" srcset="img/svg/logo-tablet.svg">
-        <img src="img/svg/logo-mobile.svg" alt="Логотип приложения Pink" width="75" height="22">
-      </picture>
-    </a>
-    <button class="main-nav__toggler">Меню</button>
-    <div class="main-nav__wrapper">
-      <ul>
+    <div class="wrapper main-nav__wrapper">
+      <a class="main-nav__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/svg/logo-desktop.svg">
+          <source media="(min-width: 660px)" srcset="img/svg/logo-tablet.svg">
+          <img src="img/svg/logo-mobile.svg" alt="Логотип приложения Pink" width="75" height="22">
+        </picture>
+      </a>
+      <button class="main-nav__toggler burger-btn">
+        <span class="burger-btn__line"></span>
+        <span class="burger-btn__line"></span>
+        <span class="burger-btn__line"></span>
+        <span class="visually-hidden">Меню</span>
+      </button>
+      <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active">
-          <a href="#" class="main-nav__link">Главная</a>
+          <a class="main-nav__link">Главная</a>
         </li>
         <li class="main-nav__item">
           <a href="#" class="main-nav__link">Фотографии</a>
@@ -40,7 +45,7 @@
       <div class="hand-slider__background"></div>
     </div>
   </div>
-  <div class="wrapper">
+  <div class="wrapper page-header__content-wrapper">
     <div class="page-header__content">
       <p class="page-header__slogan">Взгляните <br>на жизнь<br> иначе!</p>
       <div class="page-header__download">
