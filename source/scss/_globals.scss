@@ -1,11 +1,11 @@
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 .visually-hidden {
-    position: absolute !important;
+  position: absolute !important;
 	clip: rect(1px, 1px, 1px, 1px);
 	padding:0 !important;
 	border:0 !important;
@@ -15,14 +15,138 @@
 }
 
 html {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    
+	color: $cl-blue;
+	font-family: "OpenSans", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 24px;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: $cl-pink;
+
+	&:hover {
+		color: $cl-blue;
+	}
+
+	&:active {
+		color: rgba($cl-blue, 0.3);
+	}
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.btn-round {
+	display: block;
+	padding: 13px 32px 13px;
+
+	color: #fff;
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+
+	border: 3px solid #fff;
+	border-radius: 36px;
+	background: none;
+
+	transition: 0.1s;
+
+	user-select: none;
+
+	&:hover,
+	&:active {
+		color: $cl-pink;
+
+		background-color: #fff;
+	}
+
+	&:active {
+		color: rgba($cl-pink, 0.3);
+	}
+
+	&--pink {
+		color: $cl-pink;
+
+		border-color: $cl-pink;
+
+		&:hover,
+		&:active {
+			color: #fff;
+
+			background-color: $cl-pink;
+		}
+
+		&:active {
+			color: rgba(#fff, 0.3);
+		}
+	}
+
+	&--gray {
+		color: rgba($cl-blue, 0.1);
+
+		border-color: rgba($cl-blue, 0.1);
+
+		&:hover,
+		&:active {
+			color: rgba($cl-blue, 0.3);
+
+			border-color: rgba($cl-blue, 0.3);
+		}
+
+		&:active {
+			color: rgba(#fff, 0.3);
+
+			background-color: rgba($cl-blue, 0.3);
+		}
+	}
+}
+
+.btn-square {
+	padding: 23px 55px;
+
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+
+	background-color: $cl-green;
+
+	user-select: none;
+
+	&:hover {
+		background-color: $cl-darkgreen;
+	}
+
+	&:active {
+		color: rgba(#fff, 0.3);
+	}
+
+	&:disabled {
+		background-color: $cl-gray;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	body {
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+	.wrapper {
+		padding: 0 120px;
+		max-width: $desktop-width;
+	}
 }

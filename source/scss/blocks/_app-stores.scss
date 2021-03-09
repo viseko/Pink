@@ -1,0 +1,64 @@
+.app-stores {
+
+}
+
+.app-stores__links {
+  @include reset-list;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: 0 37px;
+}
+
+.app-stores__link {
+  display: block;
+
+  width: 40px;
+  height: 40px;
+
+  font-size: 0;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: 0.2s;
+
+  will-change: transform;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &--ios {
+    @include size(47px, 56px);
+
+    background-image: url(../img/svg/ios-logo.svg);
+  }
+
+  &--android {
+    @include size(43px, 47px);
+
+    background-image: url(../img/svg/android-logo.svg);
+  }
+
+  &--windows {
+    @include size(44px, 41px);
+
+    background-image: url(../img/svg/windows-logo.svg);
+  }
+}
+
+.app-stores__text {
+  margin: 0;
+  padding: 0 25px;
+
+  text-align: center;
+}
+
+@media (min-width: $desktop-width) {
+  .app-stores__text {
+    padding: 0;
+  }
+}
