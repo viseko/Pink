@@ -25,7 +25,10 @@
 }
 
 .page-header__download {
+  position: relative;
   padding-top: 28px;
+
+  z-index: 1;
 }
 
 .page-header__download-btn {
