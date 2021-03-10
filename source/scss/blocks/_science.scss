@@ -1,0 +1,74 @@
+.science {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .science {
+    display: block;
+  }
+  
+  .science__wrapper {
+    position: relative;
+
+    padding-top: 100px;
+    padding-left: 310px;
+    padding-bottom: 80px;
+
+    &::before {
+      content: "24";
+
+      position: absolute;
+      left: 20px;
+      top: 59px;
+
+      @include size(238px, 276px);
+
+      color: $cl-pink;
+      font-size: 96px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 300px;
+
+      background-image: url(../img/svg/timer.svg);
+      background-repeat: no-repeat;
+    }
+  }
+  
+  .science__title {
+    display: block;
+
+    width: 170px;
+
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .science {
+    margin-top: -1px; // Не понял, откуда пробел в 1px
+
+    background-color: #f2f2f2;
+  }
+
+  .science__wrapper {
+    padding-top: 115px;
+    padding-left: 530px;
+    padding-bottom: 104px;
+
+    &::before {
+      left: 120px;
+      top: 17px;
+
+      @include size(298px, 345px);
+
+      font-size: 120px;
+      line-height: 375px;
+    }
+  }
+
+  .science__title {
+    width: auto;
+  }
+}
