@@ -1,0 +1,154 @@
+.reviews-slider {
+  position: relative;
+}
+
+.reviews-slider__container {
+  overflow: hidden;
+}
+
+.reviews-slider__list {
+  padding-bottom: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews-slider__item {
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+  
+  user-select: none;
+}
+
+.reviews-slider__author-name {
+  display: block;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+
+  margin-bottom: 20px;
+}
+
+.reviews-slider__author-description {
+  display: none;
+}
+
+.reviews-slider__review {
+  margin: 0;
+  line-height: 30px;
+}
+
+.reviews-slider__pagination {
+  position: absolute;
+  bottom: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include size(100%, 12px);
+}
+
+.reviews-slider__bullet {
+  @include size(6px);
+
+  padding: 0;
+
+  border: 3px solid $cl-gray;
+  margin: 0 10px;
+  border-radius: 50%;
+
+  transition: 0.2s;
+  cursor: pointer;
+
+  &--active {
+    @include size(12px);
+    border-color: $cl-blue;
+
+    margin: 0 7px;
+  }
+}
+
+.reviews-slider__nav-btn {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews-slider__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .reviews-slider__review {
+    order: -1;
+    margin-bottom: 40px;
+  }
+
+  .reviews-slider__author-name {
+    margin-bottom: 0;
+
+    font-size: 20px;
+  }
+
+  .reviews-slider__author-description {
+    display: block;
+
+    font-size: 14px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews-slider {
+    padding-top: 117px;
+    padding-left: 130px;
+    padding-right: 130px;
+
+    background-image: url(../img/svg/brackets.svg);
+    background-repeat: no-repeat;
+    background-size: 70px 63px;
+    background-position: top center;
+  }
+
+  .reviews-slider__pagination {
+    display: none;
+  }
+
+  .reviews-slider__nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: block;
+    @include size(22px, 42px);
+
+    font-size: 0;
+
+    border: none;
+    background: none;
+    opacity: 0.3;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+}

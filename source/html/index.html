@@ -115,4 +115,51 @@
     <a href="#" class="science__link">Узнать больше об исследовании</a>
   </div>
 </section>
+
+<section class="reviews">
+  <h2 class="visually-hidden">Отзывы довольных клиентов</h2>
+  <div class="wrapper">
+    <article class="reviews__slider reviews-slider">
+      <div class="reviews-slider__container">
+        <div class="reviews-slider__list swiper-wrapper">
+          <blockquote class="reviews-slider__item swiper-slide">
+            <cite class="reviews-slider__author-name">Николай Петров</cite>
+            <small class="reviews-slider__author-description">25 лет, водитель трамвая</small>
+            <p class="reviews-slider__review">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </blockquote>
+          <blockquote class="reviews-slider__item swiper-slide">
+            <cite class="reviews-slider__author-name">Пётр Николаев</cite>
+            <small class="reviews-slider__author-description">27 лет, котлочист</small>
+            <p class="reviews-slider__review">
+              «Ужасное приложение! Оно разрушило мою жизнь! Моя жена сутки напролёт сидела в Pink, познакомилась с кем-то в комментариях к фото и ушла от меня.»
+            </p>
+          </blockquote>
+          <blockquote class="reviews-slider__item swiper-slide">
+            <cite class="reviews-slider__author-name">Антонина Павловна</cite>
+            <small class="reviews-slider__author-description">72 года, пенсионер</small>
+            <p class="reviews-slider__review">
+              «Ничё не понятно. Куда нажимать-то вообще?»
+            </p>
+          </blockquote>
+        </div>
+      </div>
+      <div class="reviews-slider__pagination swiper-pagination"></div>
+      <button class="reviews-slider__nav-btn reviews-slider__nav-btn--prev">
+        Пред.
+        <svg width="22" height="42">
+          <use xlink:href="img/sprite.svg#svg--ico-left-arrow"></use>
+        </svg>
+      </button>
+      <button class="reviews-slider__nav-btn reviews-slider__nav-btn--next">
+        След.
+        <svg width="22" height="42">
+          <use xlink:href="img/sprite.svg#svg--ico-right-arrow"></use>
+        </svg>
+      </button>
+    </article>
+  </div>
+</section>
+
 @@include("includes/_footer.html")

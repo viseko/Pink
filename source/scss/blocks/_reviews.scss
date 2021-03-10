@@ -1,0 +1,22 @@
+.reviews {
+  padding-top: 43px;
+  padding-bottom: 80px;
+}
+
+.reviews__slider {
+  // Не требуется
+}
+
+@media (min-wdith: $tablet-width) {
+  .reviews {
+    padding-top: 54px;
+    padding-bottom: 52px;
+  }
+}
+
+@media (min-wdith: $desktop-width) {
+  .reviews {
+    padding-top: 72px;
+    padding-bottom: 83px;
+  }
+}
