@@ -4,3 +4,5 @@
 @@include("_reviews-slider.js");
 
 @@include("_tariffs-slider.js");
+
+@@include("_map.js");

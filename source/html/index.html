@@ -269,4 +269,21 @@
   </div>
 </section>
 
+<section class="map" id="map">
+  <h2 class="visually-hidden">Схема проезда</h2>
+  <figure class="map__wrapper">
+    <div class="map__interactive" id="map-interactive"></div>
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/map.webp" type="image/webp"> 
+      <source media="(min-width: 1200px)" srcset="img/map.png">
+      <source media="(min-width: 660px)" srcset="img/map-tablet.webp" type="image/webp">  
+      <source media="(min-width: 660px)" srcset="img/map-tablet.png">
+      <source srcset="img/map-mobile.webp" type="image/webp">   
+      <img src="img/map-mobile.png" alt="Карта проезда к разработчикам Pink" class="map__image">
+    </picture>
+  </figure>
+</section>
+
+
+<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 @@include("includes/_footer.html")
