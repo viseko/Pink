@@ -164,7 +164,80 @@
 </section>
 
 <section class="tariffs">
-  
+  <h2 class="visually-hidden">Доступные тарифы</h2>
+  <div class="wrapper">
+    <div class="tariffs__table tariffs-table">
+      <div class="tariffs-table__slider swiper-container">
+        <div class="tariffs-table__wrapper">
+          <!-- Zero column -->
+        <div class="tariffs-table__column tariffs-table__column--hideable">
+          <div class="tariffs-table__head tariffs-table__head--transparent"></div>
+          <div class="tariffs-table__cell">Розовый фильтр</div>
+          <div class="tariffs-table__cell">Смайлики</div>
+          <div class="tariffs-table__cell">Комментарии</div>
+        </div>
+        <!-- First column -->
+        <div class="tariffs-table__column">
+          <div class="tariffs-table__head">
+            <h3>База</h3>
+            <p>1,99 USD</p>
+          </div>
+          @@include("includes/_tariffs-table-cell.html", {
+            "text": "Розовый фильтр",
+            "val": "yes"
+          })
+          @@include("includes/_tariffs-table-cell.html", {
+            "text": "Смайлики",
+            "val": "no"
+          })
+          @@include("includes/_tariffs-table-cell.html", {
+            "text": "Комментарии",
+            "val": "no"
+          })
+        </div>
+        <!-- Second column -->
+        <div class="tariffs-table__column">
+          <div class="tariffs-table__head tariffs-table__head--hit">
+            <h3>Стандарт</h3>
+            <p>3,99 USD</p>
+          </div>
+          @@include("includes/_tariffs-table-cell.html", {
+            "text": "Розовый фильтр",
+            "val": "yes"
+          })
+          @@include("includes/_tariffs-table-cell.html", {
+            "text": "Смайлики",
+            "val": "yes"
+          })
+          @@include("includes/_tariffs-table-cell.html", {
+            "text": "Комментарии",
+            "val": "no"
+          })
+        </div>
+        <!-- Third column -->
+        <div class="tariffs-table__column">
+          <div class="tariffs-table__head">
+            <h3>Анлим</h3>
+            <p>9,99 USD</p>
+          </div>
+          @@include("includes/_tariffs-table-cell.html", {
+            "text": "Розовый фильтр",
+            "val": "yes"
+          })
+          @@include("includes/_tariffs-table-cell.html", {
+            "text": "Смайлики",
+            "val": "yes"
+          })
+          @@include("includes/_tariffs-table-cell.html", {
+            "text": "Комментарии",
+            "val": "yes"
+          })
+        </div>
+      </div>
+      </div>
+      <div class="tariffs-table__pagination"></div>
+    </div>
+  </div>
 </section>
 
 @@include("includes/_footer.html")

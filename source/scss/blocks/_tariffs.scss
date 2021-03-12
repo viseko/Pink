@@ -1,0 +1,32 @@
+.tariffs {
+  @include diagonal(35px, 'f2f2f2');
+
+  padding-top: 66px;
+  padding-bottom: 45px;
+
+  background-color: #f2f2f2;
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs {
+    padding-top: 36px;
+    padding-bottom: 70px;
+
+    &::before {
+      top: -50px;
+      height: 50px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs {
+    padding-top: 65px;
+    padding-bottom: 90px;
+
+    &::before {
+      top: -90px;
+      height: 90px;
+    }
+  }
+}

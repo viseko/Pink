@@ -1,0 +1,142 @@
+.tariffs-table {
+  position: relative;
+  overflow: hidden;
+}
+
+.tariffs-table__wrapper {
+  display: flex;
+}
+
+.tariffs-table__column {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+
+
+  text-align: center;
+
+  border-left: 1px solid $cl-gray;
+  border-right: 1px solid $cl-gray;
+}
+
+.tariffs-table__column--hideable {
+  display: none;
+}
+
+.tariffs-table__head {
+  padding: 20px;
+
+  color: #fff;
+  text-transform: uppercase;
+
+  background-color: $cl-blue;
+
+  h3 {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+    
+    font-size: 24px;
+    font-weight: 100;
+  }
+}
+
+.tariffs-table__head--hit {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "Хит";
+
+    position: absolute;
+    left: -30px;
+    top: 0px;
+
+    padding: 5px;
+    width: 100px;
+    
+    color: inherit;
+    font-size: 14px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: $cl-pink;
+
+    transform: rotate(-45deg);
+  }
+}
+
+.tariffs-table__cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 60px;
+  padding: 15px 20px;
+
+  text-transform: uppercase;
+  
+  background-color: #fff;
+  border-top: 1px solid $cl-gray;
+  border-bottom: 1px solid $cl-gray;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.tariffs-table__icon {
+  &--no {
+    fill: #f25b26;
+  }
+
+  &--yes {
+    fill: $cl-green;
+  }
+}
+
+.tariffs-table__pagination {
+  // Пока отложено
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs-table__column {
+    flex-grow: 1;
+  }
+
+  .tariffs-table__column--hideable {
+    display: flex;
+    border-left: none;
+  }
+
+  .tariffs-table__head--transparent {
+    opacity: 0;
+    height: 98px;
+  }
+
+  .tariffs-table__hideable-text {
+    display: none;
+  }
+
+  .tariffs-table__cell {
+    justify-content: center;
+  }
+
+  .tariffs-table__column--hideable
+  .tariffs-table__cell {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariffs-table__head--transparent {
+    height: 110px;
+  }
+}
