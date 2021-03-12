@@ -103,11 +103,11 @@
   }
 }
 
-.tariffs-table__pagination {
-  
-}
-
 @media (min-width: $tablet-width) {
+  .tariffs-table__wrapper {
+    margin-bottom: 0px;
+  }
+
   .tariffs-table__column {
     flex-grow: 1;
   }
@@ -133,6 +133,10 @@
   .tariffs-table__column--hideable
   .tariffs-table__cell {
     justify-content: flex-start;
+  }
+
+  .tariffs-table__pagination {
+    display: none;
   }
 }
 
