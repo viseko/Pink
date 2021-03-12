@@ -144,6 +144,46 @@ a {
 	}
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include size(100%, 12px);
+}
+
+.pagination__bullet {
+  @include size(6px);
+
+  padding: 0;
+
+  border: 3px solid rgba($cl-blue, 0.3);
+  margin: 0 10px;
+  border-radius: 50%;
+
+  transition: 0.2s;
+  cursor: pointer;
+
+	&:hover {
+		border-color: rgba($cl-blue, 0.6);
+	}
+
+	&:active {
+		border-color: rgba($cl-blue, 0.1);
+	}
+
+  &--active {
+    @include size(12px);
+    border-color: $cl-blue;
+
+    margin: 0 7px;
+
+		&:hover,
+		&:active {
+			border-color: $cl-blue;
+		}
+  }
+}
+
 @media (min-width: $desktop-width) {
 	body {
 		font-size: 18px;

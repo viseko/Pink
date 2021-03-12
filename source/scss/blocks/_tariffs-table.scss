@@ -5,6 +5,7 @@
 
 .tariffs-table__wrapper {
   display: flex;
+  margin-bottom: 30px;
 }
 
 .tariffs-table__column {
@@ -103,7 +104,7 @@
 }
 
 .tariffs-table__pagination {
-  // Пока отложено
+  
 }
 
 @media (min-width: $tablet-width) {

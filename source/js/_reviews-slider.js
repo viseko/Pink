@@ -4,8 +4,8 @@ const reviewSlider = new Swiper('.reviews-slider__container', {
 
   pagination: {
     el: '.reviews-slider__pagination',
-    bulletClass: 'reviews-slider__bullet',
-    bulletActiveClass: 'reviews-slider__bullet--active',
+    bulletClass: 'pagination__bullet',
+    bulletActiveClass: 'pagination__bullet--active',
     clickable: true,
   }
 });

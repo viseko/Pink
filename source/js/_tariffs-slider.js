@@ -17,7 +17,14 @@
     
       slidesPerView: 1.2,
       centeredSlides: true,
-      initialSlide: 1
+      initialSlide: 1,
+
+      pagination: {
+        el: '.tariffs-table__pagination',
+        bulletClass: 'pagination__bullet',
+        bulletActiveClass: 'pagination__bullet--active',
+        clickable: true,
+      }
     });
   }
 
