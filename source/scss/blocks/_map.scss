@@ -12,7 +12,6 @@
 
 .map__image {
   width: 100%;
-  pointer-events: none;
 }
 
 .map__interactive {
@@ -20,8 +19,38 @@
   top: 0;
   left: 0;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 
-  z-index: 1;
+  background-color: rgba(#000, 0.7);
+
+  transition: 0.2s;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(#000, 0.3);
+  }
+
+  p {
+    margin-top: 50px;
+
+    color: #fff;
+  }
+}
+
+.map__interactive--init {
+  cursor: unset;
+  background-color: transparent;
+
+  p {
+    display: none;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
 }

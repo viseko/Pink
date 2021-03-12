@@ -272,7 +272,9 @@
 <section class="map" id="map">
   <h2 class="visually-hidden">Схема проезда</h2>
   <figure class="map__wrapper">
-    <div class="map__interactive" id="map-interactive"></div>
+    <div class="map__interactive" id="map-interactive">
+      <p>Нажмите, чтобы включить интерактивную карту</p>
+    </div>
     <picture>
       <source media="(min-width: 1200px)" srcset="img/map.webp" type="image/webp"> 
       <source media="(min-width: 1200px)" srcset="img/map.png">
@@ -284,6 +286,4 @@
   </figure>
 </section>
 
-
-<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 @@include("includes/_footer.html")
