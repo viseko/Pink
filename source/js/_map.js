@@ -38,6 +38,8 @@
 
             clusterer.add(myGeoObjects);
             myMap.geoObjects.add(clusterer);
+
+            myMap.behaviors.disable('scrollZoom');
         }
     }
 
