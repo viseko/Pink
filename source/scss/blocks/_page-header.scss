@@ -39,6 +39,24 @@
   padding-bottom: 35px;
 }
 
+.page-header--inner {
+  min-height: 237px;
+  padding-top: 100px;
+  padding-bottom: 85px;
+
+  background-image: url(../img/bg/bg-inner-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.page-header__inner-page-title {
+  font-size: 24px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 1.3em;
+}
+
 @media (min-width: $tablet-width) {
   .page-header {
     position: relative;
@@ -89,6 +107,19 @@
   .page-header__download {
     padding-top: 0px;
   }
+
+  .page-header--inner {
+    min-height: 440px;
+    height: auto;
+    padding-top: 140px;
+    padding-bottom: 100px;
+  
+    background-image: url(../img/bg/bg-inner-tablet.jpg);
+  }
+  
+  .page-header__inner-page-title {
+    font-size: 50px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -105,6 +136,18 @@
   }
 
   .page-header__slogan {
+    font-size: 50px;
+  }
+
+  .page-header--inner {
+    min-height: 395px;
+    padding-top: 180px;
+    padding-bottom: 110px;
+  
+    background-image: url(../img/bg/bg-inner-desktop.jpg);
+  }
+  
+  .page-header__inner-page-title {
     font-size: 50px;
   }
 }

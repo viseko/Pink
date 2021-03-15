@@ -1,6 +1,13 @@
+</main>
+
 <footer class="page-footer">
   <div class="page-footer__wrapper wrapper">
-    <a class="page-footer__logo">
+    @@if (innerPage === "true") {
+      <a href="index.html" class="page-footer__logo">
+    }
+    @@if (innerPage === "false") {
+      <a class="page-footer__logo">
+    }
       <picture>
         <source media="(min-width: 1200px)" srcset="img/svg/logo-footer-desktop.svg">
         <img src="img/svg/logo-footer-tablet.svg" width="147" height="40" alt="Логоти приложения Pink">

@@ -1,77 +1,7 @@
-@@include("includes/_header.html")
-
-<header class="page-header">
-  <nav class="page-header__nav main-nav">
-    <div class="wrapper main-nav__wrapper">
-      <a class="main-nav__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/svg/logo-desktop.svg">
-          <source media="(min-width: 660px)" srcset="img/svg/logo-tablet.svg">
-          <img src="img/svg/logo-mobile.svg" alt="Логотип приложения Pink" width="75" height="22">
-        </picture>
-      </a>
-      <button class="main-nav__toggler burger-btn">
-        <span class="burger-btn__line"></span>
-        <span class="burger-btn__line"></span>
-        <span class="burger-btn__line"></span>
-        <span class="visually-hidden">Меню</span>
-      </button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active">
-          <a class="main-nav__link">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Фотографии</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Конкурс</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">HTML Academy</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <h1 class="visually-hidden">Мобильное приложение Pink</h1>
-  <div class="page-header__background">
-    <div class="page-header__hand hand-slider">
-      <div class="hand-slider__screen-wrapper swiper-container">
-        <div class="hand-slider__screen-list swiper-wrapper">
-          <div class="hand-slider__screen hand-slider__screen-1 swiper-slide"></div>
-          <div class="hand-slider__screen hand-slider__screen-2 swiper-slide"></div>
-          <div class="hand-slider__screen hand-slider__screen-3 swiper-slide"></div>
-        </div>
-      </div>
-      <div class="hand-slider__background"></div>
-    </div>
-  </div>
-  <div class="wrapper page-header__content-wrapper">
-    <div class="page-header__content">
-      <p class="page-header__slogan">Взгляните <br>на жизнь<br> иначе!</p>
-      <div class="page-header__download">
-        <a href="#" class="page-header__download-btn btn-round">
-          Скачать приложение
-        </a>
-        <article class="page-header__stores app-stores">
-          <ul class="app-stores__links">
-            <li>
-              <a href="#" class="app-stores__link app-stores__link--ios">AppStore</a>
-            </li>
-            <li>
-              <a href="#" class="app-stores__link app-stores__link--android">PlayMarket</a>
-            </li>
-            <li>
-              <a href="#" class="app-stores__link app-stores__link--windows">Microsoft Store</a>
-            </li>
-          </ul>
-          <p class="app-stores__text">
-            Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8
-          </p>
-        </article>
-      </div>
-    </div>
-  </div>
-</header>
+@@include("includes/_header.html", {
+  "page": "index",
+  "title": "Pink"
+})
 
 <section class="advantages">
   <h2 class="visually-hidden">Преимущества приложения</h2>
@@ -255,7 +185,7 @@
       </li>
       <li class="contacts__item contacts__item--address">
         <b class="contacts__title">Приезжайте в гости: </b>
-        <a href="#map" class="contacts__link">
+        <a href="#map-interactive" class="contacts__link">
           ул. Большая<br>Конюшеннная, 19/8
         </a>
       </li>
@@ -269,7 +199,7 @@
   </div>
 </section>
 
-<section class="map" id="map">
+<section class="map">
   <h2 class="visually-hidden">Схема проезда</h2>
   <figure class="map__wrapper">
     <div class="map__interactive" id="map-interactive">
@@ -286,4 +216,6 @@
   </figure>
 </section>
 
-@@include("includes/_footer.html")
+@@include("includes/_footer.html", {
+  "innerPage": "false"
+})

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pink</title>
+  <title>@@title</title>
   <link rel="stylesheet" href="css/style.min.css">
 
   <!-- Swiper JS -->
@@ -15,3 +15,117 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
+
+  @@if (page === "index") {
+    <header class="page-header">
+  }
+  @@if (page !== "index") {
+    <header class="page-header page-header--inner">
+  }
+    <nav class="page-header__nav main-nav">
+      <div class="wrapper main-nav__wrapper">
+        @@if (page === "index") {
+          <a class="main-nav__logo">
+        }
+        @@if (page !== "index") {
+          <a href="index.html" class="main-nav__logo">
+        }
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/svg/logo-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/svg/logo-tablet.svg">
+            <img src="img/svg/logo-mobile.svg" alt="Логотип приложения Pink" width="75" height="22">
+          </picture>
+        </a>
+        <button class="main-nav__toggler burger-btn">
+          <span class="burger-btn__line"></span>
+          <span class="burger-btn__line"></span>
+          <span class="burger-btn__line"></span>
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <ul class="main-nav__list">
+            @@if (page === "index") {
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link">Главная</a>
+            }
+            @@if (page !== "index") {
+              <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link">Главная</a>
+            }
+          </li>
+          @@if (page === "photo") {
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link">Фотографии</a>
+            }
+          @@if (page !== "photo") {
+            <li class="main-nav__item">
+            <a href="photo.html" class="main-nav__link">Фотографии</a>
+          }
+          </li>
+          @@if (page === "form") {
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link">Конкурс</a>
+            }
+          @@if (page !== "form") {
+            <li class="main-nav__item">
+            <a href="form.html" class="main-nav__link">Конкурс</a>
+          }
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    @@if (page === "index") {
+      <h1 class="visually-hidden">Мобильное приложение Pink</h1>
+      <div class="page-header__background">
+        <div class="page-header__hand hand-slider">
+          <div class="hand-slider__screen-wrapper swiper-container">
+            <div class="hand-slider__screen-list swiper-wrapper">
+              <div class="hand-slider__screen hand-slider__screen-1 swiper-slide"></div>
+              <div class="hand-slider__screen hand-slider__screen-2 swiper-slide"></div>
+              <div class="hand-slider__screen hand-slider__screen-3 swiper-slide"></div>
+            </div>
+          </div>
+          <div class="hand-slider__background"></div>
+        </div>
+      </div>
+      <div class="wrapper page-header__content-wrapper">
+        <div class="page-header__content">
+          <p class="page-header__slogan">Взгляните <br>на жизнь<br> иначе!</p>
+          <div class="page-header__download">
+            <a href="#" class="page-header__download-btn btn-round">
+              Скачать приложение
+            </a>
+            <article class="page-header__stores app-stores">
+              <ul class="app-stores__links">
+                <li>
+                  <a href="#" class="app-stores__link app-stores__link--ios">AppStore</a>
+                </li>
+                <li>
+                  <a href="#" class="app-stores__link app-stores__link--android">PlayMarket</a>
+                </li>
+                <li>
+                  <a href="#" class="app-stores__link app-stores__link--windows">Microsoft Store</a>
+                </li>
+              </ul>
+              <p class="app-stores__text">
+                Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    }
+
+    @@if (page !== "index") {
+      <div class="wrapper">
+        <h1 class="page-header__inner-page-title">
+          @@h1
+        </h1>
+      </div>
+    }
+  </header>
+
+  <main>
