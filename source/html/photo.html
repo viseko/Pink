@@ -5,11 +5,231 @@
 })
 
 <section class="gallery">
+  <h2 class="visually-hidden">Галерея пользовательских фотографий</h2>
   
+  <div class="wrapper">
+    <p class="gallery__intro">
+      Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+    </p>
+  </div>
+
+  <figure class="galery__panorama photo photo--panorama">
+    <a href="#" class="photo__link photo__link--label" data-label="Панорама дня">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/photos/panorama-desktop.webp" type="image/webp">
+        <source media="(min-width: 1200px)" srcset="img/photos/panorama-desktop.jpg">
+        <source media="(min-width: 660px)" srcset="img/photos/panorama-tablet.webp" type="image/webp">
+        <source media="(min-width: 660px)" srcset="img/photos/panorama-tablet.jpg">
+        <source srcset="img/photos/panorama-mobile.webp" type="image/webp">
+        <img src="img/photos/panorama-mobile.jpg" alt="Панорама дня">
+      </picture>
+    </a>
+    <figcaption class="photo__content photo__content--panorama">
+      <p class="photo__author">
+        <b class="photo__author-name">Анна</b>
+        <time class="photo__date" datetime="2021-03-15T04:20">(5 минут назад)</time>
+      </p>
+      <p class="photo__text">
+        Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+      </p>
+      <div class="photo__likes">
+        <button class="photo__like-btn" aria-label="Мне нравится!">
+          <svg width="13" height="12">
+            <use xlink:href="img/sprite.svg#svg--ico-heart"></use>
+          </svg>
+        </button>
+        <span class="photo__likes-count">Нравится: 215</span>
+      </div>
+    </figcaption>
+  </figure>
+
+  <div class="wrapper">
+    <div class="galery__photo-list">
+      <figure class="gallery__photo photo">
+        <a href="#" class="photo__link">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-1-desktop.webp" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-1-desktop.jpg">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-1-tablet.webp" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-1-tablet.jpg">
+            <source srcset="img/photos/photo-1-mobile.webp" type="image/webp">
+            <img src="img/photos/photo-1-mobile.jpg" alt="Тачка">
+          </picture>
+        </a>
+        <figcaption class="photo__content">
+          <p class="photo__author">
+            <b class="photo__author-name">Левон</b>
+            <time class="photo__date" datetime="2021-03-15T04:20">(5 часов назад)</time>
+          </p>
+          <p class="photo__text">
+            Вчера он на луну летал, сегодня в руки к нам попал.
+          </p>
+          <div class="photo__likes">
+            <button class="photo__like-btn" aria-label="Мне нравится!">
+              <svg width="13" height="12">
+                <use xlink:href="img/sprite.svg#svg--ico-heart"></use>
+              </svg>
+            </button>
+            <span class="photo__likes-count">Нравится: 356</span>
+          </div>
+        </figcaption>
+      </figure>
+  
+      <figure class="gallery__photo photo">
+        <a href="#" class="photo__link">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-2-desktop.webp" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-2-desktop.jpg">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-2-tablet.webp" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-2-tablet.jpg">
+            <source srcset="img/photos/photo-2-mobile.webp" type="image/webp">
+            <img src="img/photos/photo-2-mobile.jpg" alt="Новая барабанная установка!">
+          </picture>
+        </a>
+        <figcaption class="photo__content">
+          <p class="photo__author">
+            <b class="photo__author-name">Антон</b>
+            <time class="photo__date" datetime="2021-03-15T04:20">(12 часов назад)</time>
+          </p>
+          <p class="photo__text">
+            Соседи будут рады!
+          </p>
+          <div class="photo__likes">
+            <button class="photo__like-btn" aria-label="Мне нравится!">
+              <svg width="13" height="12">
+                <use xlink:href="img/sprite.svg#svg--ico-heart"></use>
+              </svg>
+            </button>
+            <span class="photo__likes-count">Нравится: 666</span>
+          </div>
+        </figcaption>
+      </figure>
+  
+      <figure class="gallery__photo photo">
+        <a href="#" class="photo__link">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-3-desktop.webp" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-3-desktop.jpg">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-3-tablet.webp" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-3-tablet.jpg">
+            <source srcset="img/photos/photo-3-mobile.webp" type="image/webp">
+            <img src="img/photos/photo-3-mobile.jpg" alt="Какая-то крыша">
+          </picture>
+        </a>
+        <figcaption class="photo__content">
+          <p class="photo__author">
+            <b class="photo__author-name">Борис</b>
+            <time class="photo__date" datetime="2021-03-15T04:20">(20 часов назад)</time>
+          </p>
+          <p class="photo__text">
+            Здесь могла быть ваша цитата о высоком и вечном.
+          </p>
+          <div class="photo__likes">
+            <button class="photo__like-btn" aria-label="Мне нравится!">
+              <svg width="13" height="12">
+                <use xlink:href="img/sprite.svg#svg--ico-heart"></use>
+              </svg>
+            </button>
+            <span class="photo__likes-count">Нравится: 215</span>
+          </div>
+        </figcaption>
+      </figure>
+  
+      <figure class="gallery__photo photo">
+        <a href="#" class="photo__link">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-4-desktop.webp" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-4-desktop.jpg">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-4-tablet.webp" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-4-tablet.jpg">
+            <source srcset="img/photos/photo-4-mobile.webp" type="image/webp">
+            <img src="img/photos/photo-4-mobile.jpg" alt="Кубанская бахча">
+          </picture>
+        </a>
+        <figcaption class="photo__content">
+          <p class="photo__author">
+            <b class="photo__author-name">Сергей</b>
+            <time class="photo__date" datetime="2021-03-15T04:20">(25 часов назад)</time>
+          </p>
+          <p class="photo__text">
+            Самая кубанская в мире!
+          </p>
+          <div class="photo__likes">
+            <button class="photo__like-btn" aria-label="Мне нравится!">
+              <svg width="13" height="12">
+                <use xlink:href="img/sprite.svg#svg--ico-heart"></use>
+              </svg>
+            </button>
+            <span class="photo__likes-count">Нравится: 4</span>
+          </div>
+        </figcaption>
+      </figure>
+  
+      <figure class="gallery__photo photo">
+        <a href="#" class="photo__link">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-5-desktop.webp" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-5-desktop.jpg">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-5-tablet.webp" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-5-tablet.jpg">
+            <source srcset="img/photos/photo-5-mobile.webp" type="image/webp">
+            <img src="img/photos/photo-5-mobile.jpg" alt="Бесснежные холмы">
+          </picture>
+        </a>
+        <figcaption class="photo__content">
+          <p class="photo__author">
+            <b class="photo__author-name">Максим</b>
+            <time class="photo__date" datetime="2021-03-15T04:20">(40 часов назад)</time>
+          </p>
+          <p class="photo__text">
+            Где снег-то?
+          </p>
+          <div class="photo__likes">
+            <button class="photo__like-btn" aria-label="Мне нравится!">
+              <svg width="13" height="12">
+                <use xlink:href="img/sprite.svg#svg--ico-heart"></use>
+              </svg>
+            </button>
+            <span class="photo__likes-count">Нравится: 150</span>
+          </div>
+        </figcaption>
+      </figure>
+  
+      <figure class="gallery__photo photo">
+        <a href="#" class="photo__link">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-6-desktop.webp" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photos/photo-6-desktop.jpg">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-6-tablet.webp" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photos/photo-6-tablet.jpg">
+            <source srcset="img/photos/photo-6-mobile.webp" type="image/webp">
+            <img src="img/photos/photo-6-mobile.jpg" alt="Крыло самолёта">
+          </picture>
+        </a>
+        <figcaption class="photo__content">
+          <p class="photo__author">
+            <b class="photo__author-name">Надежда</b>
+            <time class="photo__date" datetime="2021-03-15T04:20">(45 часов назад)</time>
+          </p>
+          <p class="photo__text">
+            Всем GM и взаимные лайки
+          </p>
+          <div class="photo__likes">
+            <button class="photo__like-btn" aria-label="Мне нравится!">
+              <svg width="13" height="12">
+                <use xlink:href="img/sprite.svg#svg--ico-heart"></use>
+              </svg>
+            </button>
+            <span class="photo__likes-count">Нравится: 150</span>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
 <section class="post">
-
+  <h2 class="visually-hidden">Поделиться своей фотографией</h2>
 </section>
 
 @@include("includes/_footer.html", {
