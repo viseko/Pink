@@ -1,9 +1,11 @@
 (function () {
-    ymaps.ready(prepareMap);
-
-    let mapInit = false;
     const mapWrapper = document.querySelector('.map__interactive');
+    let mapInit = false;
 
+    if (mapWrapper) {
+        ymaps.ready(prepareMap);
+    }
+    
     function prepareMap() {
         mapWrapper.addEventListener("click", initMap);
     }

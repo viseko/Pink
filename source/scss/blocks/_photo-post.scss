@@ -1,0 +1,264 @@
+.photo-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 40px;
+
+  overflow: hidden;
+}
+
+.photo-post__image-attach-wrapper {
+  @include size(280px, 374px);
+  margin-bottom: 42px;
+
+  [type="file"] {
+    display: block;
+    @include size(100%);
+
+    font-size: 0;
+
+    background-image: url(../img/photos/photo-7-mobile.jpg);
+    background-size: cover;
+
+    cursor: pointer;
+
+    &::-webkit-file-upload-button {
+      display: none;
+    }
+  }
+}
+
+.photo-post__controls-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+}
+
+.photo-post__filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.photo-post__filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 208px;
+  margin-bottom: 40px
+}
+
+.photo-post__filter-btn {
+  padding: 0;
+
+  border: none;
+  background: none;
+
+  svg {
+    display: block;
+    fill: rgba($cl-blue, 0.3);
+  }
+
+  &:hover svg {
+    fill: rgba($cl-blue, 0.5);
+  }
+
+  &--active svg,
+  &--active:hover svg {
+    fill: $cl-pink;
+  }
+}
+
+.photo-post__filter-inputs {
+  position: relative;
+
+  width: 100%;
+  padding: 0 20px 25px;
+  margin-bottom: 37px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include size(300%, 1px);
+    background-color: #dddfe0;
+  }
+}
+
+.photo-post__filter-input {
+  display: none;
+
+  [type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+
+    outline: none;
+    background-color: transparent;
+
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 2px;
+
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+      background-color: $cl-blue;
+
+      cursor: pointer;
+    }
+
+    &:focus::-webkit-slider-runnable-track {
+      background-color: $cl-pink;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      @include size(14px);
+      margin-top: -6px;
+
+      border: 2px solid $cl-pink;
+      border-radius: 50%;
+      background-color: #fff;
+
+      cursor: pointer;
+
+      &:active {
+        background-color: $cl-pink;
+      }
+    }
+  }
+
+  svg {
+    display: none;
+  }
+}
+
+.photo-post__filter-input--active {
+  display: block;
+}
+
+.photo-post__filter-icon {
+  // Пока не требуется
+}
+
+.photo-post__buttons {
+  width: 100%;
+
+  button {
+    width: 100%;
+  }
+
+  [type="submit"] {
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .photo-post {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    padding: 57px 20px 54px;
+    margin: auto;
+    max-width: 960px;
+  }
+
+  .photo-post__image-attach-wrapper {
+    @include size(300px, 400px);
+    margin-bottom: 0;
+    margin-right: 47px;
+
+    [type="file"] {
+      background-image: url(../img/photos/photo-7-tablet.jpg);
+    }
+  }
+
+  .photo-post__controls-wrapper {
+    flex-grow: 1;
+  }
+
+  .photo-post__filter-buttons {
+    display: none;
+  }
+
+  .photo-post__filter-inputs::after {
+    display: none;
+  }
+
+  .photo-post__filter-input {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    padding-left: 50px;
+
+    border-bottom: 1px solid rgba($cl-blue, 0.1);
+
+    &:first-child {
+      padding-top: 10px;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+
+      display: block;
+      fill: $cl-pink;
+    }
+
+    &--fill svg {
+      left: 2px;
+    }
+
+    &--contrast svg {
+      left: 6px;
+    }
+  }
+
+  .photo-post__buttons {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo-post {
+    padding: 57px 60px 57px 80px;
+  }
+
+  .photo-post__image-attach-wrapper {
+    margin-right: 90px;
+  }
+
+  .photo-post__filter-input {
+    padding-left: 90px;
+
+    &--crop svg {
+      @include size(44px);
+    }
+
+    &--fill svg {
+      @include size(48px, 43px);
+    }
+
+    &--contrast svg {
+      @include size(32px);
+    }
+  }
+
+  .photo-post__buttons {
+    display: flex;
+
+    [type="submit"] {
+      margin-bottom: 0;
+      margin-right: 44px;
+    }
+  }
+}

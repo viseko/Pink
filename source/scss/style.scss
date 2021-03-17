@@ -1,12 +1,17 @@
+// Normalize
 @import "../../node_modules/node.normalize.scss/normalize";
 
+// General values and elements
 @import "variables";
 @import "mixins";
 @import "fonts";
 @import "globals";
 
+// Header
 @import "blocks/page-header";
 @import "blocks/main-nav";
+
+// Index.html
 @import "blocks/app-stores";
 @import "blocks/hand-slider";
 @import "blocks/burger-btn";
@@ -25,8 +30,13 @@
 
 @import "blocks/map";
 
+// Footer
 @import "blocks/page-footer";
 @import "blocks/socials";
 
+// Photo.html
 @import "blocks/gallery";
 @import "blocks/photo";
+
+@import "blocks/post";
+@import "blocks/photo-post";

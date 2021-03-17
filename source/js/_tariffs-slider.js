@@ -5,7 +5,6 @@
   Пример позаимствован здесь: https://codepen.io/aaronkahlhamer/pen/GveaXP
   */
 
-  const breakpointTablet = 660;
   const breakpoint = window.matchMedia( '(min-width: 660px)' );
 
   let slider;

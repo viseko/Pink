@@ -6,3 +6,5 @@
 @@include("_tariffs-slider.js");
 
 @@include("_map.js");
+
+@@include("_photo-post-tabs.js");
