@@ -7,14 +7,14 @@
   // Не требуется
 }
 
-@media (min-wdith: $tablet-width) {
+@media (min-width: $tablet-width) {
   .reviews {
     padding-top: 54px;
     padding-bottom: 52px;
   }
 }
 
-@media (min-wdith: $desktop-width) {
+@media (min-width: $desktop-width) {
   .reviews {
     padding-top: 72px;
     padding-bottom: 83px;
