@@ -1,0 +1,46 @@
+.competition {
+  // Не требуется
+}
+
+.competition__intro {
+  padding: 45px 0;
+
+  text-align: center;
+  line-height: 30px;
+}
+
+.competition__intro-offer {
+  display: none;
+}
+
+.competition__form {
+  // Не требуется
+}
+
+.competition__form-wrapper {
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .competition__form-wrapper {
+    padding: 0 20px;
+  }
+
+  .competition__intro {
+    width: 490px;
+    padding: 90px 0 70px;
+    margin: auto;
+
+    font-size: 18px;
+  }
+
+  .competition__intro-offer {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .competition__intro {
+    width: 760px;
+  }
+}
