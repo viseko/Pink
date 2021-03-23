@@ -1,15 +1,14 @@
 .app-stores {
-
+  // Не требуется
 }
 
 .app-stores__links {
   @include reset-list;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-bottom: 28px;
-  padding: 0 37px;
 }
 
 .app-stores__link {
@@ -33,12 +32,14 @@
 
   &--ios {
     @include size(47px, 56px);
+    margin-right: 34px;
 
     background-image: url(../img/svg/ios-logo.svg);
   }
 
   &--android {
     @include size(43px, 47px);
+    margin-right: 37px;
 
     background-image: url(../img/svg/android-logo.svg);
   }
@@ -52,8 +53,9 @@
 
 .app-stores__text {
   margin: 0;
-  padding: 0 25px;
+  // padding: 0 25px;
 
+  font-weight: 100;
   text-align: center;
 }
 

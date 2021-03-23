@@ -1,6 +1,11 @@
 </main>
 
-<footer class="page-footer">
+@@if (innerPage === "true") {
+  <footer class="page-footer">
+}
+@@if (innerPage === "false") {
+  <footer class="page-footer page-footer--index-page">
+}
   <div class="page-footer__wrapper wrapper">
     @@if (innerPage === "true") {
       <a href="index.html" class="page-footer__logo">

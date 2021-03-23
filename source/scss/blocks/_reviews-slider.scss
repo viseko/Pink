@@ -7,7 +7,7 @@
 }
 
 .reviews-slider__list {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   width: 100%;
   height: 100%;
 }
@@ -38,36 +38,6 @@
 .reviews-slider__review {
   margin: 0;
   line-height: 30px;
-}
-
-.reviews-slider__pagination {
-  position: absolute;
-  bottom: 0px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include size(100%, 12px);
-}
-
-.reviews-slider__bullet {
-  @include size(6px);
-
-  padding: 0;
-
-  border: 3px solid $cl-gray;
-  margin: 0 10px;
-  border-radius: 50%;
-
-  transition: 0.2s;
-  cursor: pointer;
-
-  &--active {
-    @include size(12px);
-    border-color: $cl-blue;
-
-    margin: 0 7px;
-  }
 }
 
 .reviews-slider__nav-btn {
@@ -150,5 +120,13 @@
     &:active {
       opacity: 0.1;
     }
+  }
+
+  .reviews-slider__author-name {
+    font-size: 24px;
+  }
+
+  .reviews-slider__author-description {
+    font-size: 18px;
   }
 }

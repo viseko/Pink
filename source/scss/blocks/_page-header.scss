@@ -16,8 +16,9 @@
 
 .page-header__hand {
   position: absolute;
-  right: 20%;
   bottom: 0;
+  left: 42%;
+  transform: translateX(-50%);
 }
 
 .page-header__slogan {
@@ -41,8 +42,8 @@
 
 .page-header--inner {
   min-height: 237px;
-  padding-top: 100px;
-  padding-bottom: 85px;
+  padding-top: 86px;
+  padding-bottom: 20px;
 
   background-image: url(../img/bg/bg-inner-mobile.jpg);
   background-repeat: no-repeat;
@@ -62,7 +63,7 @@
     position: relative;
 
     height: 100vh;
-    min-height: 629px;
+    min-height: 729px;
   }
 
   .page-header__background {
@@ -77,7 +78,9 @@
   }
 
   .page-header__hand {
-    right: 10px;
+    transform: unset;
+    left: unset;
+    right: 0px;
   }
 
   .page-header__content-wrapper {
@@ -87,16 +90,20 @@
     align-items: center;
     height: 100%;
     padding-top: 123px;
+
+    pointer-events: none;
   }
 
   .page-header__content {
     width: 310px;
+
+    pointer-events: visible;
   }
 
   .page-header__slogan {
     display: block;
     margin: 0;
-    margin-bottom: 39px;
+    margin-bottom: 29px;
 
     font-size: 40px;
     font-weight: 100;
@@ -124,19 +131,23 @@
 
 @media (min-width: $desktop-width) {
   .page-header {
-    min-height: 729px;
+    min-height: 853px;
+  }
+
+  .page-header__content-wrapper {
+    padding-top: 170px;
+    padding-bottom: 70px;
   }
 
   .page-header__background {
     background-image: url(../img/bg/bg-desktop.jpg);
   }
 
-  .page-header__hand {
-    right: 40px;
-  }
-
   .page-header__slogan {
+    margin-bottom: 55px;
+
     font-size: 50px;
+    line-height: 1.2em;
   }
 
   .page-header--inner {
@@ -149,5 +160,9 @@
   
   .page-header__inner-page-title {
     font-size: 50px;
+  }
+
+  .page-header__download-btn {
+    margin-bottom: 62px;
   }
 }

@@ -54,11 +54,10 @@
 
   .science__wrapper {
     padding-top: 115px;
-    padding-left: 530px;
+    padding-left: 410px;
     padding-bottom: 104px;
 
     &::before {
-      left: 120px;
       top: 17px;
 
       @include size(298px, 345px);

@@ -17,10 +17,11 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 21px;
-  padding-bottom: 25px;
+  padding-bottom: 21px;
 }
 
 .main-nav__logo img {
+  display: block;
   @include size(75px, 22px);
 }
 
@@ -59,6 +60,7 @@
   }
 }
 
+// Оформление выпадающего меню для мобильной и планшетной версий
 @media (max-width: $desktop-width - 1px) {
   .main-nav._active {
     background-color: $cl-blue;
@@ -100,8 +102,9 @@
 
 @media (min-width: $tablet-width) {
   .main-nav__wrapper {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    align-items: flex-end;
+    padding-top: 27px;
+    padding-bottom: 43px;
   }
 
   .main-nav__logo img {
@@ -112,7 +115,7 @@
 @media (min-width: $desktop-width) {
   .main-nav__wrapper {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
   }
 
   .main-nav__toggler {
