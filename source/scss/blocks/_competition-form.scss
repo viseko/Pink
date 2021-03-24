@@ -139,6 +139,7 @@
   & + label {
     position: relative;
 
+    display: block;
     padding-left: 70px;
 
     font-size: 18px;
@@ -150,9 +151,8 @@
   & + label::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translateY(-50%);
 
     @include size(36px);
 
@@ -175,8 +175,6 @@
   &:checked + label::after {
     content: "";
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 
@@ -186,6 +184,7 @@
   }
 
   &:checked + label::after {
+    top: 11px;
     left: 11px;
     
     @include size(14px);
@@ -201,6 +200,7 @@
   }
 
   &:checked + label::after {
+    top: 10px;
     left: 8px;
     
     @include size(22px, 16px);

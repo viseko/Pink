@@ -10,3 +10,5 @@
 @@include("_map.js");
 
 @@include("_photo-post-tabs.js");
+
+@@include("_form-validation.js");
