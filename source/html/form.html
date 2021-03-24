@@ -12,35 +12,35 @@
   </div>
   <div class="wrapper competition__form competition__form-wrapper">
     <form action="https://echo.htmlacademy.ru" class="competition-form">
-      <fieldset class="competition-form__passport-data">
+      <fieldset class="competition-form__fieldset competition-form__fieldset--passport">
         <div class="competition-form__text-input-wrapper competition-form__text-input-wrapper--passport">
           <label for="user-surname">Фамилия:</label>
-          <input type="text" id="user-surname" name="user-surname" placeholder="Укажите фамилию *" required>
+          <input class="competition-form__text-input" type="text" id="user-surname" name="user-surname" placeholder="Укажите фамилию *" required>
         </div>
         <div class="competition-form__text-input-wrapper competition-form__text-input-wrapper--passport">
           <label for="user-name">Имя:</label>
-          <input type="text" id="user-name" name="user-name" placeholder="Введите ваше  имя *" required>
+          <input class="competition-form__text-input" type="text" id="user-name" name="user-name" placeholder="Введите ваше  имя *" required>
         </div>
         <div class="competition-form__text-input-wrapper competition-form__text-input-wrapper--passport">
           <label for="user-patronym">Отчество:</label>
-          <input type="text" id="user-patronym" name="user-patronym" placeholder="Ну и отчество тоже">
+          <input class="competition-form__text-input" type="text" id="user-patronym" name="user-patronym" placeholder="Ну и отчество тоже">
         </div>
       </fieldset>
 
-      <div class="competition-form__fieldset-wrapper competition-form__fieldset-wrapper--app-version">
-        <fieldset class="competition-form__app-version">
+      <div class="competition-form__fieldset-wrapper competition-form__fieldset-wrapper--version">
+        <fieldset class="competition-form__fieldset competition-form__fieldset--version competition-form__fieldset--bordered">
           <legend>С каким приложением путешествовали?</legend>
-          <ul role="none">
+          <ul class="competition-form__list competition-form__list--version" role="none">
             <li>
-              <input type="radio" name="app-version" id="version-ios" value="ios" checked>
+              <input class="competition-form__input-box competition-form__input-box--radio" type="radio" name="app-version" id="version-ios" value="ios" checked>
               <label for="version-ios">Pink для iOS</label>
             </li>
             <li>
-              <input type="radio" name="app-version" id="version-android" value="android">
+              <input class="competition-form__input-box competition-form__input-box--radio" type="radio" name="app-version" id="version-android" value="android">
               <label for="version-android">Pink на Android</label>
             </li>
             <li>
-              <input type="radio" name="app-version" id="version-windows" value="windows">
+              <input class="competition-form__input-box competition-form__input-box--radio" type="radio" name="app-version" id="version-windows" value="windows">
               <label for="version-windows">Windows Phone</label>
             </li>
           </ul>
@@ -48,44 +48,44 @@
       </div>
       
       <div class="competition-form__fieldset-wrapper competition-form__fieldset-wrapper--achievements">
-        <fieldset class="competition-form__achievements">
+        <fieldset class="competition-form__fieldset competition-form__fieldset--achievements competition-form__fieldset--bordered">
           <legend>Ваши безбашенные достижения в путешествии</legend>
-          <ul role="none">
+          <ul class="competition-form__list competition-form__list--achievements" role="none">
             <li>
-              <input type="checkbox" name="achievements" id="achievements-selfie" value="selfie-with-an-acula">
+              <input class="competition-form__input-box competition-form__input-box--checkbox" type="checkbox" name="achievements" id="achievements-selfie" value="selfie-with-an-acula">
               <label for="achievements-selfie">Сделал селфи с акулой</label>
             </li>
             <li>
-              <input type="checkbox" name="achievements" id="achievements-burned" value="burned-on-the-beach">
+              <input class="competition-form__input-box competition-form__input-box--checkbox" type="checkbox" name="achievements" id="achievements-burned" value="burned-on-the-beach">
               <label for="achievements-burned">Обгорел на пляже</label>
             </li>
             <li>
-              <input type="checkbox" name="achievements" id="achievements-chuck" value="saw-chuck-norris">
+              <input class="competition-form__input-box competition-form__input-box--checkbox" type="checkbox" name="achievements" id="achievements-chuck" value="saw-chuck-norris">
               <label for="achievements-chuck">Видел Чака Норриса</label>
             </li>
             <li>
-              <input type="checkbox" name="achievements" id="achievements-souvenirs" value="bought-souvenirs">
+              <input class="competition-form__input-box competition-form__input-box--checkbox" type="checkbox" name="achievements" id="achievements-souvenirs" value="bought-souvenirs">
               <label for="achievements-souvenirs">Накупил сувениров</label>
             </li>
             <li>
-              <input type="checkbox" name="achievements" id="achievements-tower" value="held-a-tower">
+              <input class="competition-form__input-box competition-form__input-box--checkbox" type="checkbox" name="achievements" id="achievements-tower" value="held-a-tower">
               <label for="achievements-tower">Удержал башню</label>
             </li>
             <li>
-              <input type="checkbox" name="achievements" id="achievements-hotel" value="destroyed-a-hotel">
+              <input class="competition-form__input-box competition-form__input-box--checkbox" type="checkbox" name="achievements" id="achievements-hotel" value="destroyed-a-hotel">
               <label for="achievements-hotel">Разгромил отель</label>
             </li>
           </ul>
         </fieldset>
       </div>
 
-      <fieldset class="competition-form__contacts">
+      <fieldset class="competition-form__fieldset competition-form__fieldset--contacts competition-form__fieldset--bordered">
         <legend>Контактная информация</legend>
         <div class="competition-form__text-input-wrapper competition-form__text-input-wrapper--contacts">
           <label for="user-phone">Номер телефона</label>
           <div class="competition-form__contact-input-wrapper">
-            <input type="tel" id="user-phone" name="user-phone" placeholder="Номер, пожалуйста">
-            <svg width="20" height="19">
+            <input class="competition-form__text-input" type="tel" id="user-phone" name="user-phone" placeholder="Номер, пожалуйста">
+            <svg class="competition-form__contact-icon competition-form__contact-icon--phone" width="20" height="19">
               <use xlink:href="img/sprite.svg#svg--ico-phone"></use>
             </svg>
           </div>
@@ -93,23 +93,23 @@
         <div class="competition-form__text-input-wrapper competition-form__text-input-wrapper--contacts">
           <label for="user-email">Адрес почты</label>
           <div class="competition-form__contact-input-wrapper">
-            <input type="email" id="user-email" name="user-email" placeholder="Введите почту *" required>
-            <svg width="20" height="19">
+            <input class="competition-form__text-input" type="email" id="user-email" name="user-email" placeholder="Введите почту *" required>
+            <svg class="competition-form__contact-icon competition-form__contact-icon--mail" width="20" height="19">
               <use xlink:href="img/sprite.svg#svg--ico-mail"></use>
             </svg>
           </div>
         </div>
       </fieldset>
 
-      <fieldset class="competition-form__emotions">
+      <fieldset class="competition-form__fieldset competition-form__fieldset--emotions competition-form__fieldset--bordered">
         <legend>Опишите свои эмоции</legend>
-        <textarea name="emotions" id="" cols="30" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        <textarea class="competition-form__text-input competition-form__textarea" name="emotions" id="" cols="30" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </fieldset>
 
       <footer class="competition-form__footer">
-        <button class="btn-square" type="submit">Отправить форму</button>
+        <button class="btn-square competition-form__submit-btn" type="submit">Отправить форму</button>
         <div class="competition-form__require-hint">
-          <b>*</b> &ndash; обязательные поля
+          <b>*</b> &mdash; обязательные поля
         </div>
       </footer>
     </form>

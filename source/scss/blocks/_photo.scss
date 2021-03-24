@@ -1,20 +1,31 @@
 .photo {
   display: flex;
   flex-direction: column;
-
-  img {
-    display: block;
-  }
 }
 
 .photo__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   overflow: hidden;
   height: 180px;
 
-  background-color: $cl-blue;
+  background-color: $cl-gray;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    display: block;
+    width: 100%;
+
+    transition: 0.3s;
+    will-change: transform;
+  }
+
+  &:hover img {
+    transform: translate(-50%, -50%) scale(1.03);
+  }
 }
 
 .photo--panorama .photo__link {
