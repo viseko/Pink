@@ -29,7 +29,7 @@ function tryToSubmit(e) {
 }
 
 function submitFormData() {
-  // Имитация отправки данных формы аяксом и очистка формы
+  // Здесь "отправляем данные формы аяксом" и очищаем форму
   competitionForm.reset();
 
   showModal(modalFormSuccess);

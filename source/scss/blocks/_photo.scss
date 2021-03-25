@@ -11,11 +11,6 @@
   background-color: $cl-gray;
 
   img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-
     display: block;
     width: 100%;
 
@@ -24,12 +19,13 @@
   }
 
   &:hover img {
-    transform: translate(-50%, -50%) scale(1.03);
+    transform: scale(1.03);
   }
 }
 
 .photo--panorama .photo__link {
-  height: 137px;
+  height: auto;
+  max-height: 200px;
 }
 
 .photo__link--label {
@@ -65,7 +61,8 @@
 }
 
 .photo__content--panorama {
-  margin: 0 20px;
+  margin: auto;
+  width: 280px;
 }
 
 .photo__author {
@@ -121,7 +118,7 @@
   }
   
   .photo--panorama .photo__link {
-    height: 509px;
+    max-height: 509px;
   }
 
   .photo__link--label::after {
@@ -136,6 +133,7 @@
   .photo__content--panorama {
     position: relative;
     min-height: 121px;
+    width: 620px;
 
     .photo__likes {
       position: absolute;
@@ -163,7 +161,7 @@
   }
   
   .photo--panorama .photo__link {
-    height: 506px;
+    max-height: 506px;
   }
 
   .photo__link--label::after {
@@ -172,6 +170,8 @@
   }
 
   .photo__content--panorama {
-    margin: 0 120px;
+    margin: auto;
+    width: calc(100vw - 40px);
+    max-width: 940px;
   }
 }

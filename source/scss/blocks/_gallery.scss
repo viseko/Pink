@@ -2,6 +2,10 @@
   // Не требуется
 }
 
+.gallery__wrapper {
+  max-width: 320px;
+}
+
 .gallery__intro {
   margin: auto;
   padding: 50px 0;
@@ -20,7 +24,6 @@
 .galery__photo-list {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   width: 100%;
 }
 
@@ -30,6 +33,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .gallery__wrapper {
+    max-width: 660px;
+  }
+
   .gallery__intro {
     width: 600px;
     padding: 100px 0 75px;
@@ -50,6 +57,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .gallery__wrapper {
+    max-width: 960px;
+  }
+
   .gallery__intro {
     padding: 100px 0;
   }
