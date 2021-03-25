@@ -69,7 +69,7 @@
   .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .page-footer__logo,
@@ -77,8 +77,12 @@
     margin-bottom: 0;
   }
 
-  .page-footer__logo {
-    align-self: flex-start;
+  .page-footer__social {
+    max-width: 200px;
+  }
+
+  .footer__copyright {
+    margin-top: 5px;
   }
 }
 

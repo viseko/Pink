@@ -102,7 +102,11 @@
   }
 
   .contacts__list {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+  }
+
+  .contacts__item {
+    width: 300px;
   }
 
   .contacts__title {

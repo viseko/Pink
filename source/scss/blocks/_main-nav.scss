@@ -114,6 +114,7 @@
 
 @media (min-width: $desktop-width) {
   .main-nav__wrapper {
+    align-items: flex-start;
     padding-top: 30px;
     padding-bottom: 40px;
   }
@@ -124,14 +125,19 @@
 
   .main-nav__list {
     position: static;
+
     display: flex;
-    justify-content: space-between;
     flex-grow: 1;
-    margin-left: 160px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    max-width: 620px;
   }
 
   .main-nav__item {
     position: relative;
+
+    margin-top: 10px;
+
     &--active::after {
       content: "";
       position: absolute;
@@ -142,6 +148,10 @@
       height: 2px;
 
       background-color: #fff;
+    }
+
+    &:not(:nth-child(4n+4)) {
+      margin-right: 70px;
     }
   }
 
