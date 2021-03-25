@@ -15,7 +15,11 @@ const path = {
         js: `${sourceFolder}/js/script.js`,
         img: [`${sourceFolder}/img/**/*.{png,jpg,gif,svg,ico,webp}`, `!${sourceFolder}/img/**/ico-*.svg`],
         svgIcons: `${sourceFolder}/img/**/ico-*.svg`,
-        fonts: `${sourceFolder}/fonts/*.{ttf,woff,woff2}`
+        fonts: `${sourceFolder}/fonts/*.{ttf,woff,woff2}`,
+        favicons: {
+            icon: `${sourceFolder}/favicon/favicon.svg`,
+            manifest: `${sourceFolder}/favicon/manifest.json`
+        }
     },
     watch: {
         html: `${sourceFolder}/html/**/*.html`,
@@ -46,6 +50,7 @@ const svgSprite = require("gulp-svg-sprite");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const fonter = require("gulp-fonter");
+const svg2png = require("gulp-svg2png");
 
 
 function browserSync() {
@@ -158,10 +163,41 @@ function clean() {
     return del(path.clean);
 }
 
-const build = gulp.series(clean, gulp.parallel(js, css, html, img, fonts, spritesSVG));
+function favicons() {
+    // Переносим в билд манифест
+    gulp.src(path.src.favicons.manifest)
+        .pipe(dest(path.build.html));
+    
+    // Оптимизируем и перемещаем SVG-шку
+    gulp.src(path.src.favicons.icon)
+        .pipe(imagemin())
+        .pipe(dest(path.build.html));
+
+    // Иконка для apple-touch
+    gulp.src(path.src.favicons.icon)
+        .pipe(svg2png({
+            width: 180,
+            height: 180
+        }))
+        .pipe(imagemin())
+        .pipe(rename('apple-touch-icon.png'))
+        .pipe(dest(path.build.html));
+    
+    // Иконка для google-touch
+    return gulp.src(path.src.favicons.icon)
+        .pipe(svg2png({
+            width: 512,
+            height: 512
+        }))
+        .pipe(imagemin())
+        .pipe(rename('google-touch-icon.png'))
+        .pipe(dest(path.build.html));
+}
+
+const build = gulp.series(clean, gulp.parallel(js, css, html, img, fonts, spritesSVG, favicons));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
-
+exports.favicons  = favicons;
 exports.spritesSVG = spritesSVG;
 exports.fonts = fonts;
 exports.img = img;
