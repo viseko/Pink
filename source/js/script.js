@@ -1,4 +1,5 @@
 @@include("_no-js.js");
+@@include("_webp.js");
 
 @@include("_hand-slider.js");
 @@include("_burger.js");

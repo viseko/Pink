@@ -51,6 +51,7 @@ const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const fonter = require("gulp-fonter");
 const svg2png = require("gulp-svg2png");
+const ghPages = require("gulp-gh-pages");
 
 
 function browserSync() {
@@ -109,13 +110,13 @@ function js() {
 function img() {
     return src(path.src.img)
         .pipe(webp({
-            quality: 70
+            quality: 80
         }))
         .pipe(dest(path.build.img))
         .pipe(src(path.src.img))
         .pipe(imagemin({
             progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
+            svgoPlugins: [{removeViewBox: ffalse}],
             interlaced: true,
             optimizationLevel: 3 // 0-7
         }))
@@ -193,6 +194,11 @@ function favicons() {
         .pipe(rename('google-touch-icon.png'))
         .pipe(dest(path.build.html));
 }
+
+gulp.task('deploy', function() {
+    return gulp.src(`${projectFolder}/**/*`)
+      .pipe(ghPages());
+  });
 
 const build = gulp.series(clean, gulp.parallel(js, css, html, img, fonts, spritesSVG, favicons));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
