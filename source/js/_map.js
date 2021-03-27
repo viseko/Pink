@@ -1,6 +1,6 @@
 (function () {
     const mapWrapper = document.querySelector('.map__interactive');
-    let mapInit = false;
+    let mapLoading = false;
 
     if (mapWrapper) {
         prepareMap();
@@ -11,62 +11,61 @@
     }
 
     function loadMap() {
-        const script = document.createElement('script');
-        script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+        if (!mapLoading) {
+            mapLoading = true;
+            const script = document.createElement('script');
+            script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
 
-        document.body.appendChild(script);
+            document.body.appendChild(script);
 
-        let timeout = 100;
-        const poll = function() {
-            setTimeout(function() {
-                timeout--;
-                
-                if (typeof ymaps !== 'undefined') {
-                    ymaps.ready(initMap);
-                } else if (timeout > 0) {
-                    poll();
-                } else {
-                    console.log('Не удалось загрузить карту');
-                }
-            }, 100);
-        };
+            let timeout = 100;
+            const poll = function() {
+                setTimeout(function() {
+                    timeout--;
+                    
+                    if (typeof ymaps !== 'undefined') {
+                        ymaps.ready(initMap);
+                    } else if (timeout > 0) {
+                        poll();
+                    } else {
+                        console.log('Не удалось загрузить карту');
+                    }
+                }, 100);
+            };
 
-        poll();
+            poll();
+        }
     }
 
     function initMap() {
-        if (!mapInit) {
-            mapInit = true;
+        mapWrapper.classList.add('map__interactive--init');
 
-            mapWrapper.classList.add('map__interactive--init');
+        let myMap = new ymaps.Map("map-interactive", {
+            center: [59.938635, 30.323118],
+            zoom: 17,
+            controls: ["zoomControl"]
+        });
 
-            let myMap = new ymaps.Map("map-interactive", {
-                center: [59.938635, 30.323118],
-                zoom: 17,
-                controls: ["zoomControl"]
-            });
+        let myGeoObjects = [];
 
-            let myGeoObjects = [];
+        myGeoObjects = new ymaps.Placemark([59.938635, 30.323118], {
+            baloonContentBody: 'Текст в балуне',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/svg/map-marker.svg',
+            iconImageSize: [36,36],
+            iconImageOffset: [-18, -18]
+        });
 
-            myGeoObjects = new ymaps.Placemark([59.938635, 30.323118], {
-                baloonContentBody: 'Текст в балуне',
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: 'img/svg/map-marker.svg',
-                iconImageSize: [36,36],
-                iconImageOffset: [-18, -18]
-            });
+        let clusterer = new ymaps.Clusterer({
+            clusterDisableClickZoom: false,
+            cluseterOpenBaloonOnClick: false,
+        });
 
-            let clusterer = new ymaps.Clusterer({
-                clusterDisableClickZoom: false,
-                cluseterOpenBaloonOnClick: false,
-            });
+        clusterer.add(myGeoObjects);
+        myMap.geoObjects.add(clusterer);
 
-            clusterer.add(myGeoObjects);
-            myMap.geoObjects.add(clusterer);
-
-            myMap.behaviors.disable('scrollZoom');
-        }
+        myMap.behaviors.disable('scrollZoom');
     }
 
 })();
