@@ -3,11 +3,35 @@
     let mapInit = false;
 
     if (mapWrapper) {
-        ymaps.ready(prepareMap);
+        prepareMap();
     }
     
     function prepareMap() {
-        mapWrapper.addEventListener("click", initMap);
+        mapWrapper.addEventListener("click", loadMap);
+    }
+
+    function loadMap() {
+        const script = document.createElement('script');
+        script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+
+        document.body.appendChild(script);
+
+        let timeout = 100;
+        const poll = function() {
+            setTimeout(function() {
+                timeout--;
+                
+                if (typeof ymaps !== 'undefined') {
+                    ymaps.ready(initMap);
+                } else if (timeout > 0) {
+                    poll();
+                } else {
+                    console.log('Не удалось загрузить карту');
+                }
+            }, 100);
+        };
+
+        poll();
     }
 
     function initMap() {
