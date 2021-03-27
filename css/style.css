@@ -553,7 +553,7 @@ a:active {
 
 .btn-round {
   display: block;
-  padding: 18px 22px;
+  padding: 15px 22px;
   color: #fff;
   font-size: 18px;
   line-height: 18px;
@@ -773,10 +773,37 @@ a:active {
   padding-bottom: 21px;
 }
 
-.main-nav__logo img {
+.main-nav__logo svg {
   display: block;
   width: 75px;
   height: 22px;
+}
+
+.main-nav__logo path {
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.main-nav__logo[href]:hover path {
+  fill: #d22856;
+}
+
+.main-nav__logo[href]:active path {
+  fill: #fff;
+  opacity: 0.3;
+}
+
+.main-nav__logo[href]:hover path.cls-2 {
+  fill: #fff;
+}
+
+.main-nav__logo-tablet {
+  display: none;
+}
+
+.main-nav__logo-desktop {
+  display: none;
 }
 
 .main-nav__toggler {
@@ -812,7 +839,7 @@ a:active {
 }
 
 .main-nav__link[href]:active {
-  color: rgba(210, 40, 86, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .app-stores__links {
@@ -874,6 +901,7 @@ a:active {
   margin: 0;
   font-weight: 100;
   text-align: center;
+  line-height: 24px;
 }
 
 .hand-slider {
@@ -1424,9 +1452,35 @@ a:active {
 }
 
 .page-footer__logo {
+  margin-bottom: 40px;
+}
+
+.page-footer__logo path {
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.page-footer__logo[href]:hover .cls-1 {
+  fill: #d22856;
+}
+
+.page-footer__logo[href]:active .cls-1 {
+  fill: #283645;
+}
+
+.page-footer__logo[href]:active path {
+  opacity: 0.3;
+}
+
+.page-footer__logo svg {
+  display: block;
   width: 146px;
   height: 40px;
-  margin-bottom: 40px;
+}
+
+.page-footer__logo-desktop {
+  display: none;
 }
 
 .page-footer__social {
@@ -2253,7 +2307,7 @@ a:active {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
-    padding-top: 123px;
+    padding-top: 200px;
     pointer-events: none;
   }
 
@@ -2300,9 +2354,17 @@ a:active {
     padding-bottom: 43px;
   }
 
-  .main-nav__logo img {
+  .main-nav__logo svg {
     width: 147px;
     height: 40px;
+  }
+
+  .main-nav__logo-mobile {
+    display: none;
+  }
+
+  .main-nav__logo-tablet {
+    display: block;
   }
 
   .hand-slider {
@@ -2577,7 +2639,7 @@ a:active {
   }
 
   .page-footer {
-    padding: 36px 0;
+    padding: 36px 0 30px;
   }
 
   .page-footer--index-page {
@@ -2981,7 +3043,7 @@ a:active {
   }
 
   .page-header__content-wrapper {
-    padding-top: 200px;
+    padding-top: 210px;
     padding-bottom: 70px;
   }
 
@@ -3026,6 +3088,14 @@ a:active {
     padding-bottom: 40px;
   }
 
+  .main-nav__logo-tablet {
+    display: none;
+  }
+
+  .main-nav__logo-desktop {
+    display: block;
+  }
+
   .main-nav__toggler {
     display: none;
   }
@@ -3067,10 +3137,6 @@ a:active {
     padding: 0;
     font-weight: normal;
     text-transform: none;
-  }
-
-  .app-stores__text {
-    padding: 0;
   }
 
   .hand-slider {
@@ -3370,7 +3436,15 @@ a:active {
   }
 
   .page-footer {
-    padding: 75px 0;
+    padding: 70px 0 60px;
+  }
+
+  .page-footer__logo-tablet {
+    display: none;
+  }
+
+  .page-footer__logo-desktop {
+    display: block;
   }
 
   .gallery__wrapper {
