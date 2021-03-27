@@ -13,9 +13,32 @@
 }
 
 .page-footer__logo {
-  @include size(146px, 40px);
-
   margin-bottom: 40px;
+}
+
+.page-footer__logo path {
+  transition: 0.1s;
+}
+
+.page-footer__logo[href]:hover .cls-1 {
+  fill: $cl-pink;
+}
+
+.page-footer__logo[href]:active .cls-1 {
+  fill: $cl-blue;
+}
+
+.page-footer__logo[href]:active path {
+  opacity: 0.3;
+}
+
+.page-footer__logo svg {
+  display: block;
+  @include size(146px, 40px);
+}
+
+.page-footer__logo-desktop {
+  display: none;
 }
 
 .page-footer__social {
@@ -35,7 +58,7 @@
 
   svg {
     fill: $cl-pink;
-    
+
     transition: 0.2s;
   }
 
@@ -89,5 +112,13 @@
 @media (min-width: $desktop-width) {
   .page-footer {
     padding: 75px 0;
+  }
+
+  .page-footer__logo-tablet {
+    display: none;
+  }
+
+  .page-footer__logo-desktop {
+    display: block;
   }
 }

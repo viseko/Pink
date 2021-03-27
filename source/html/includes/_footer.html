@@ -13,10 +13,7 @@
     @@if (innerPage === "false") {
       <a class="page-footer__logo">
     }
-      <picture>
-        <source media="(min-width: 960px)" srcset="img/svg/logo-footer-desktop.svg">
-        <img src="img/svg/logo-footer-tablet.svg" width="147" height="40" alt="Логоти приложения Pink">
-      </picture>
+      @@include("_logo-footer.html")
     </a>
     <article class="page-footer__social social">
       <a href="#" class="social__ico">

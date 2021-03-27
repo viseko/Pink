@@ -29,11 +29,7 @@
         @@if (page !== "index") {
           <a href="index.html" class="main-nav__logo">
         }
-          <picture>
-            <source media="(min-width: 960px)" srcset="img/svg/logo-desktop.svg">
-            <source media="(min-width: 660px)" srcset="img/svg/logo-tablet.svg">
-            <img src="img/svg/logo-mobile.svg" alt="Логотип приложения Pink" width="75" height="22">
-          </picture>
+          @@include("_logo-header.html")
         </a>
         <button class="main-nav__toggler burger-btn">
           <span class="burger-btn__line"></span>

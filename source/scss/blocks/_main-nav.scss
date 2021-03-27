@@ -20,9 +20,34 @@
   padding-bottom: 21px;
 }
 
-.main-nav__logo img {
+.main-nav__logo svg {
   display: block;
   @include size(75px, 22px);
+}
+
+.main-nav__logo path {
+  transition: 0.1s;
+}
+
+.main-nav__logo[href]:hover path {
+  fill: $cl-pink;
+}
+
+.main-nav__logo[href]:active path {
+  fill: #fff;
+  opacity: 0.3;
+}
+
+.main-nav__logo[href]:hover path.cls-2 {
+  fill: #fff;
+}
+
+.main-nav__logo-tablet {
+  display: none;
+}
+
+.main-nav__logo-desktop {
+  display: none;
 }
 
 .main-nav__toggler {
@@ -38,7 +63,7 @@
   width: 100%;
   padding: 20px 27px;
 
-  
+
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -56,7 +81,7 @@
   }
 
   &[href]:active {
-    color: rgba($cl-pink, 0.3);
+    color: rgba(#fff, 0.3);
   }
 }
 
@@ -71,16 +96,16 @@
 
     width: 100%;
     overflow: hidden;
-  
+
     background-color: $cl-blue;
     top: 100%;
     left: 0px;
-  
+
     transition: 0.3s;
     transform: scaleY(0);
     transform-origin: top;
   }
-  
+
   ._active .main-nav__list {
     transform: scaleY(1);
   }
@@ -88,11 +113,11 @@
   .main-nav__item {
     border-top: 1px solid lighten($cl-blue, 10%);
     border-bottom: 1px solid #000;
-  
+
     &--active {
       border-top: 1px solid #000;
       border-bottom: 1px solid lighten($cl-blue, 10%);
-      
+
       & + li {
         border-top-color: transparent;
       }
@@ -107,8 +132,16 @@
     padding-bottom: 43px;
   }
 
-  .main-nav__logo img {
+  .main-nav__logo svg {
     @include size(147px, 40px);
+  }
+
+  .main-nav__logo-mobile {
+    display: none;
+  }
+
+  .main-nav__logo-tablet {
+    display: block;
   }
 }
 
@@ -117,6 +150,14 @@
     align-items: flex-start;
     padding-top: 30px;
     padding-bottom: 40px;
+  }
+
+  .main-nav__logo-tablet {
+    display: none;
+  }
+
+  .main-nav__logo-desktop {
+    display: block;
   }
 
   .main-nav__toggler {
