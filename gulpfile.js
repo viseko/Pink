@@ -116,7 +116,7 @@ function img() {
         .pipe(src(path.src.img))
         .pipe(imagemin({
             progressive: true,
-            svgoPlugins: [{removeViewBox: ffalse}],
+            svgoPlugins: [{removeViewBox: false}],
             interlaced: true,
             optimizationLevel: 3 // 0-7
         }))
