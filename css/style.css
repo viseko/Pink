@@ -893,6 +893,10 @@ a:active {
   pointer-events: none;
 }
 
+.webp .hand-slider__background {
+  background-image: url(../img/hand-mobile.webp);
+}
+
 .hand-slider__screen-wrapper {
   position: absolute;
   left: 104px;
@@ -920,6 +924,18 @@ a:active {
 
 .hand-slider__screen-3 {
   background-image: url(../img/screens/mobile-screen-3.jpg);
+}
+
+.webp .hand-slider__screen-1 {
+  background-image: url(../img/screens/mobile-screen-1.webp);
+}
+
+.webp .hand-slider__screen-2 {
+  background-image: url(../img/screens/mobile-screen-2.webp);
+}
+
+.webp .hand-slider__screen-3 {
+  background-image: url(../img/screens/mobile-screen-3.webp);
 }
 
 .burger-btn {
@@ -1706,6 +1722,10 @@ a:active {
   display: none;
 }
 
+.webp .photo-post__image-attach-wrapper [type="file"] {
+  background-image: url(../img/photos/photo-7-mobile.webp);
+}
+
 .photo-post__controls-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2264,6 +2284,10 @@ a:active {
     background-image: url(../img/bg/bg-inner-tablet.jpg);
   }
 
+  .webp .page-header--inner {
+    background-image: url(../img/bg/bg-inner-tablet.webp);
+  }
+
   .page-header__inner-page-title {
     font-size: 50px;
   }
@@ -2290,6 +2314,10 @@ a:active {
     background-image: url(../img/hand-tablet.png);
   }
 
+  .webp .hand-slider__background {
+    background-image: url(../img/hand-tablet.webp);
+  }
+
   .hand-slider__screen-wrapper {
     top: 53px;
     left: 370px;
@@ -2307,6 +2335,18 @@ a:active {
 
   .hand-slider__screen-3 {
     background-image: url(../img/screens/desktop-screen-3.jpg);
+  }
+
+  .webp .hand-slider__screen-1 {
+    background-image: url(../img/screens/desktop-screen-1.webp);
+  }
+
+  .webp .hand-slider__screen-2 {
+    background-image: url(../img/screens/desktop-screen-2.webp);
+  }
+
+  .webp .hand-slider__screen-3 {
+    background-image: url(../img/screens/desktop-screen-3.webp);
   }
 
   .advantages__intro {
@@ -2674,6 +2714,10 @@ a:active {
     background-image: url(../img/photos/photo-7-tablet.jpg);
   }
 
+  .webp .photo-post__image-attach-wrapper [type="file"] {
+    background-image: url(../img/photos/photo-7-tablet.webp);
+  }
+
   .photo-post__controls-wrapper {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -2945,6 +2989,10 @@ a:active {
     background-image: url(../img/bg/bg-desktop.jpg);
   }
 
+  .webp .page-header__background {
+    background-image: url(../img/bg/bg-desktop.webp);
+  }
+
   .page-header__slogan {
     margin-bottom: 55px;
     font-size: 50px;
@@ -2956,6 +3004,10 @@ a:active {
     padding-top: 180px;
     padding-bottom: 110px;
     background-image: url(../img/bg/bg-inner-desktop.jpg);
+  }
+
+  .webp .page-header--inner {
+    background-image: url(../img/bg/bg-inner-desktop.webp);
   }
 
   .page-header__inner-page-title {
@@ -3030,6 +3082,10 @@ a:active {
     background-image: url(../img/hand-desktop.png);
   }
 
+  .webp .hand-slider__background {
+    background-image: url(../img/hand-desktop.webp);
+  }
+
   .hand-slider__screen-wrapper {
     top: 64px;
     left: 570px;
@@ -3047,6 +3103,18 @@ a:active {
 
   .hand-slider__screen-3 {
     background-image: url(../img/screens/desktop-screen-3@x2.jpg);
+  }
+
+  .webp .hand-slider__screen-1 {
+    background-image: url(../img/screens/desktop-screen-1@x2.webp);
+  }
+
+  .webp .hand-slider__screen-2 {
+    background-image: url(../img/screens/desktop-screen-2@x2.webp);
+  }
+
+  .webp .hand-slider__screen-3 {
+    background-image: url(../img/screens/desktop-screen-3@x2.webp);
   }
 
   .advantages__intro {
@@ -3129,6 +3197,22 @@ a:active {
 
   .advantages__item--friends::after {
     background-image: url(../img/advantages/adv-screen-3.png);
+  }
+
+  .webp .advantages__item::before {
+    background-image: url(../img/iphone.webp), url(../img/advantages/adv-border.webp);
+  }
+
+  .webp .advantages__item--mood::after {
+    background-image: url(../img/advantages/adv-screen-1.webp);
+  }
+
+  .webp .advantages__item--change::after {
+    background-image: url(../img/advantages/adv-screen-2.webp);
+  }
+
+  .webp .advantages__item--friends::after {
+    background-image: url(../img/advantages/adv-screen-3.webp);
   }
 
   .advantages__title {
