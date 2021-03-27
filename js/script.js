@@ -110,6 +110,14 @@ if (document.querySelector('.reviews-slider__container')) {
     let mapInit = false;
 
     if (mapWrapper) {
+        prepareMap();
+    }
+    
+    function prepareMap() {
+        mapWrapper.addEventListener("click", loadMap);
+    }
+
+    function loadMap() {
         const script = document.createElement('script');
         script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
 
@@ -121,7 +129,7 @@ if (document.querySelector('.reviews-slider__container')) {
                 timeout--;
                 
                 if (typeof ymaps !== 'undefined') {
-                    ymaps.ready(prepareMap);
+                    ymaps.ready(initMap);
                 } else if (timeout > 0) {
                     poll();
                 } else {
@@ -131,10 +139,6 @@ if (document.querySelector('.reviews-slider__container')) {
         };
 
         poll();
-    }
-    
-    function prepareMap() {
-        mapWrapper.addEventListener("click", initMap);
     }
 
     function initMap() {
