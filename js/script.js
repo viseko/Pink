@@ -110,7 +110,27 @@ if (document.querySelector('.reviews-slider__container')) {
     let mapInit = false;
 
     if (mapWrapper) {
-        ymaps.ready(prepareMap);
+        const script = document.createElement('script');
+        script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+
+        document.body.appendChild(script);
+
+        let timeout = 100;
+        const poll = function() {
+            setTimeout(function() {
+                timeout--;
+                
+                if (typeof ymaps !== 'undefined') {
+                    ymaps.ready(prepareMap);
+                } else if (timeout > 0) {
+                    poll();
+                } else {
+                    console.log('Не удалось загрузить карту');
+                }
+            }, 100);
+        };
+
+        poll();
     }
     
     function prepareMap() {
