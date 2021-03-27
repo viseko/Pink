@@ -1,5 +1,6 @@
-let nojs = document.querySelector('.nojs');
+let nojs = document.querySelector('html.nojs');
 
 if (nojs) {
-  nojs.classList.remove('nojs')
+  nojs.removeAttribute('class');
+
 }

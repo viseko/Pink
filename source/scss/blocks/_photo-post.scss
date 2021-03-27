@@ -29,6 +29,12 @@
   }
 }
 
+.webp .photo-post__image-attach-wrapper {
+  [type="file"] {
+    background-image: url(../img/photos/photo-7-mobile.webp);
+  }
+}
+
 .photo-post__controls-wrapper {
   display: flex;
   flex-direction: column;
@@ -178,6 +184,12 @@
 
     [type="file"] {
       background-image: url(../img/photos/photo-7-tablet.jpg);
+    }
+  }
+
+  .webp .photo-post__image-attach-wrapper {
+    [type="file"] {
+      background-image: url(../img/photos/photo-7-tablet.webp);
     }
   }
 

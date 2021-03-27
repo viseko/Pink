@@ -122,6 +122,10 @@
   
     background-image: url(../img/bg/bg-inner-tablet.jpg);
   }
+
+  .webp .page-header--inner {
+    background-image: url(../img/bg/bg-inner-tablet.webp);
+  }
   
   .page-header__inner-page-title {
     font-size: 50px;
@@ -142,6 +146,10 @@
     background-image: url(../img/bg/bg-desktop.jpg);
   }
 
+  .webp .page-header__background {
+    background-image: url(../img/bg/bg-desktop.webp);
+  }
+
   .page-header__slogan {
     margin-bottom: 55px;
 
@@ -155,6 +163,10 @@
     padding-bottom: 110px;
   
     background-image: url(../img/bg/bg-inner-desktop.jpg);
+  }
+
+  .webp .page-header--inner {
+    background-image: url(../img/bg/bg-inner-desktop.webp);
   }
   
   .page-header__inner-page-title {

@@ -193,6 +193,25 @@
     }
   }
 
+  .webp .advantages__item {
+    &::before {
+      background-image:
+        url(../img/iphone.webp),
+        url(../img/advantages/adv-border.webp);
+    }
+    &--mood::after {
+      background-image: url(../img/advantages/adv-screen-1.webp);
+    }
+
+    &--change::after {
+      background-image: url(../img/advantages/adv-screen-2.webp);      
+    }
+
+    &--friends::after {
+      background-image: url(../img/advantages/adv-screen-3.webp);      
+    }
+  }
+
   .advantages__title {
     padding: 0;
     margin-bottom: 25px;
