@@ -116,7 +116,6 @@ if (document.querySelector('.reviews-slider__container')) {
 // Подключение яндекс-карты
 (function () {
     const mapWrapper = document.querySelector('.map__interactive');
-    const mapMessage = mapWrapper.querySelector('p');
     let mapLoading = false;
 
     if (mapWrapper) {
@@ -130,6 +129,8 @@ if (document.querySelector('.reviews-slider__container')) {
     function loadMap() {
         if (!mapLoading) {
             mapLoading = true;
+
+            const mapMessage = mapWrapper.querySelector('p');
             mapMessage.innerHTML = 'Загрузка карты..';
 
             const script = document.createElement('script');
