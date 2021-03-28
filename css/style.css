@@ -465,7 +465,7 @@ th {
 @font-face {
   font-family: "OpenSans";
   font-display: swap;
-  src: url("../fonts/OpenSans_regular.woff") format("woff"), url("../fonts/OpenSans_regular.woff") format("woff2");
+  src: url("../fonts/OpenSans_regular.woff") format("woff2"), url("../fonts/OpenSans_regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -473,7 +473,7 @@ th {
 @font-face {
   font-family: "OpenSans";
   font-display: swap;
-  src: url("../fonts/OpenSans_bold.woff") format("woff"), url("../fonts/OpenSans_bold.woff") format("woff2");
+  src: url("../fonts/OpenSans_bold.woff") format("woff2"), url("../fonts/OpenSans_bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -481,7 +481,7 @@ th {
 @font-face {
   font-family: "OpenSans";
   font-display: swap;
-  src: url("../fonts/OpenSans_light.woff") format("woff"), url("../fonts/OpenSans_light.woff") format("woff2");
+  src: url("../fonts/OpenSans_light.woff") format("woff2"), url("../fonts/OpenSans_light.woff") format("woff");
   font-weight: 100;
   font-style: normal;
 }
@@ -489,7 +489,7 @@ th {
 @font-face {
   font-family: "MyriadPro";
   font-display: swap;
-  src: url("../fonts/MyriadPro.woff") format("woff"), url("../fonts/MyriadPro.woff") format("woff2");
+  src: url("../fonts/MyriadPro.woff") format("woff2"), url("../fonts/MyriadPro.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -921,6 +921,7 @@ a:active {
   height: 100%;
   background-image: url(../img/hand-mobile.png);
   background-repeat: no-repeat;
+  background-size: 320px 314px;
   z-index: 1;
   pointer-events: none;
 }
@@ -2534,6 +2535,7 @@ a:active {
 
   .hand-slider__background {
     background-image: url(../img/hand-tablet.png);
+    background-size: contain;
   }
 
   .webp .hand-slider__background {

@@ -116,12 +116,13 @@ if (document.querySelector('.reviews-slider__container')) {
 // Подключение яндекс-карты
 (function () {
     const mapWrapper = document.querySelector('.map__interactive');
+    const mapMessage = mapWrapper.querySelector('p');
     let mapLoading = false;
 
     if (mapWrapper) {
         prepareMap();
     }
-    
+
     function prepareMap() {
         mapWrapper.addEventListener("click", loadMap);
     }
@@ -129,6 +130,8 @@ if (document.querySelector('.reviews-slider__container')) {
     function loadMap() {
         if (!mapLoading) {
             mapLoading = true;
+            mapMessage.innerHTML = 'Загрузка карты..';
+
             const script = document.createElement('script');
             script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
 
@@ -138,13 +141,13 @@ if (document.querySelector('.reviews-slider__container')) {
             const poll = function() {
                 setTimeout(function() {
                     timeout--;
-                    
+
                     if (typeof ymaps !== 'undefined') {
                         ymaps.ready(initMap);
                     } else if (timeout > 0) {
                         poll();
                     } else {
-                        console.log('Не удалось загрузить карту');
+                      mapMessage.innerHTML = 'Не удалось загрузить карту :(';
                     }
                 }, 100);
             };
@@ -184,7 +187,8 @@ if (document.querySelector('.reviews-slider__container')) {
         myMap.behaviors.disable('scrollZoom');
     }
 
-})();;
+})();
+;
 
 // Табы для мобильной версии формы отправки фото
 (function() {
