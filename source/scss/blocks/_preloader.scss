@@ -12,6 +12,16 @@
   }
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .preloader {
   position: fixed;
   top: 0;
@@ -24,6 +34,8 @@
   @include size(100vw, 100vh);
 
   background-color: $cl-blue;
+
+  animation: appear 0.2s;
 }
 
 .nojs .preloader {
