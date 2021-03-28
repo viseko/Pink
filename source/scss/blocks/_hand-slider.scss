@@ -15,6 +15,7 @@
     background-image: url(../img/hand-mobile@x2.png);
   }
   background-repeat: no-repeat;
+  background-size: 320px 314px;
 
   z-index: 1;
   pointer-events: none;
@@ -94,6 +95,7 @@
 
   .hand-slider__background {
     background-image: url(../img/hand-tablet.png);
+    background-size: contain;
     @include retina() {
       background-image: url(../img/hand-tablet@x2.png);
     }
