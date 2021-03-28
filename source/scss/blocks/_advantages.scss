@@ -29,10 +29,20 @@
   padding-top: 50px;
   padding-bottom: 280px;
 
-  background-image: url(../img/advantages/iphone-screen3.webp);
+  background-image: url(../img/advantages/iphone-screen3.png);
+  @include retina {
+    background-image: url(../img/advantages/iphone-screen3@x2.png);
+  }
   background-size: 157px 320px;
   background-position: center calc(100% + 43px);
   background-repeat: no-repeat;
+}
+
+.webp .advantages__list {
+  background-image: url(../img/advantages/iphone-screen3.webp);
+  @include retina {
+    background-image: url(../img/advantages/iphone-screen3@x2.webp);
+  }
 }
 
 .advantages__item {
@@ -53,10 +63,10 @@
 @media (min-width: $tablet-width) {
   .advantages__intro {
     padding-bottom: 100px;
-  
+
     font-size: 40px;
     line-height: normal;
-  
+
     p {
       margin: 0px;
     }
@@ -79,7 +89,7 @@
     padding-left: 300px;
 
     background-image: none;
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -87,11 +97,19 @@
       left: 0;
 
       @include size(268px, 547px);
-      background-image: url(../img/advantages/iphone-screen3@x2.webp);
+      background-image: url(../img/advantages/iphone-screen3@x2.png);
       background-position: left top;
 
       background-size: cover;
     }
+  }
+
+  .webp .advantages__list {
+    background-image: none;
+  }
+
+  .webp .advantages__list::before {
+    background-image: url(../img/advantages/iphone-screen3@x2.webp);
   }
 
   .advantages__item {
@@ -107,9 +125,9 @@
   .advantages__intro {
     padding-top: 50px;
     padding-bottom: 170px;
-  
+
     font-size: 50px;
-  
+
     p {
       margin: 0px;
     }
@@ -158,6 +176,11 @@
       background-image:
         url(../img/iphone.png),
         url(../img/advantages/adv-border.png);
+      @include retina {
+        background-image:
+        url(../img/iphone@x2.png),
+        url(../img/advantages/adv-border.png);
+      }
       background-repeat: no-repeat;
       background-size:
         186px 382px,
@@ -182,14 +205,23 @@
 
     &--mood::after {
       background-image: url(../img/advantages/adv-screen-1.png);
+      @include retina {
+        background-image: url(../img/advantages/adv-screen-1@x2.png);
+      }
     }
 
     &--change::after {
-      background-image: url(../img/advantages/adv-screen-2.png);      
+      background-image: url(../img/advantages/adv-screen-2.png);
+      @include retina {
+        background-image: url(../img/advantages/adv-screen-2@x2.png);
+      }
     }
 
     &--friends::after {
-      background-image: url(../img/advantages/adv-screen-3.png);      
+      background-image: url(../img/advantages/adv-screen-3.png);
+      @include retina {
+        background-image: url(../img/advantages/adv-screen-3@x2.png);
+      }
     }
   }
 
@@ -198,17 +230,31 @@
       background-image:
         url(../img/iphone.webp),
         url(../img/advantages/adv-border.webp);
+      @include retina {
+        background-image:
+          url(../img/iphone@x2.webp),
+          url(../img/advantages/adv-border.webp);
+      }
     }
     &--mood::after {
       background-image: url(../img/advantages/adv-screen-1.webp);
+      @include retina {
+        background-image: url(../img/advantages/adv-screen-1@x2.webp);
+      }
     }
 
     &--change::after {
-      background-image: url(../img/advantages/adv-screen-2.webp);      
+      background-image: url(../img/advantages/adv-screen-2.webp);
+      @include retina {
+        background-image: url(../img/advantages/adv-screen-2@x2.webp);
+      }
     }
 
     &--friends::after {
-      background-image: url(../img/advantages/adv-screen-3.webp);      
+      background-image: url(../img/advantages/adv-screen-3.webp);
+      @include retina {
+        background-image: url(../img/advantages/adv-screen-3@x2.webp);
+      }
     }
   }
 

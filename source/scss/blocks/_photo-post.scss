@@ -18,6 +18,9 @@
     font-size: 0;
 
     background-image: url(../img/photos/photo-7-mobile.jpg);
+    @include retina() {
+      background-image: url(../img/photos/photo-7-mobile@x2.jpg);
+    }
     background-size: cover;
     background-color: $cl-blue;
 
@@ -32,6 +35,9 @@
 .webp .photo-post__image-attach-wrapper {
   [type="file"] {
     background-image: url(../img/photos/photo-7-mobile.webp);
+    @include retina() {
+      background-image: url(../img/photos/photo-7-mobile@x2.webp);
+    }
   }
 }
 
@@ -184,12 +190,18 @@
 
     [type="file"] {
       background-image: url(../img/photos/photo-7-tablet.jpg);
+      @include retina() {
+        background-image: url(../img/photos/photo-7-tablet@x2.jpg);
+      }
     }
   }
 
   .webp .photo-post__image-attach-wrapper {
     [type="file"] {
       background-image: url(../img/photos/photo-7-tablet.webp);
+      @include retina() {
+        background-image: url(../img/photos/photo-7-tablet@x2.webp);
+      }
     }
   }
 

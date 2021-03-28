@@ -53,14 +53,8 @@
 
 .app-stores__text {
   margin: 0;
-  // padding: 0 25px;
 
   font-weight: 100;
   text-align: center;
-}
-
-@media (min-width: $desktop-width) {
-  .app-stores__text {
-    padding: 0;
-  }
+  line-height: 24px;
 }

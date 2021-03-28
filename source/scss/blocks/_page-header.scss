@@ -10,6 +10,9 @@
   height: 462px;
 
   background-image: url(../img/bg/bg-mobile.jpg);
+  @include retina() {
+    background-image: url(../img/bg/bg-mobile@x2.jpg);
+  }
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -46,9 +49,19 @@
   padding-bottom: 20px;
 
   background-image: url(../img/bg/bg-inner-mobile.jpg);
+  @include retina {
+    background-image: url(../img/bg/bg-inner-mobile@x2.jpg);
+  }
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.webp .page-header--inner {
+  background-image: url(../img/bg/bg-inner-mobile.webp);
+  @include retina {
+    background-image: url(../img/bg/bg-inner-mobile@x2.webp);
+  }
 }
 
 .page-header__inner-page-title {
@@ -74,6 +87,16 @@
     height: 100%;
 
     background-image: url(../img/bg/bg-tablet.jpg);
+    @include retina() {
+      background-image: url(../img/bg/bg-tablet@x2.jpg);
+    }
+  }
+
+  .webp .page-header__background {
+    background-image: url(../img/bg/bg-tablet.webp);
+    @include retina() {
+      background-image: url(../img/bg/bg-tablet@x2.webp);
+    }
   }
 
   .page-header__hand {
@@ -88,7 +111,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding-top: 123px;
+    padding-top: 200px;
 
     pointer-events: none;
   }
@@ -119,14 +142,20 @@
     height: auto;
     padding-top: 140px;
     padding-bottom: 100px;
-  
+
     background-image: url(../img/bg/bg-inner-tablet.jpg);
+    @include retina() {
+      background-image: url(../img/bg/bg-inner-tablet@x2.jpg);
+    }
   }
 
   .webp .page-header--inner {
     background-image: url(../img/bg/bg-inner-tablet.webp);
+    @include retina() {
+      background-image: url(../img/bg/bg-inner-tablet@x2.webp);
+    }
   }
-  
+
   .page-header__inner-page-title {
     font-size: 50px;
   }
@@ -138,16 +167,22 @@
   }
 
   .page-header__content-wrapper {
-    padding-top: 200px;
+    padding-top: 210px;
     padding-bottom: 70px;
   }
 
   .page-header__background {
     background-image: url(../img/bg/bg-desktop.jpg);
+    @include retina() {
+      background-image: url(../img/bg/bg-desktop@x2.jpg);
+    }
   }
 
   .webp .page-header__background {
     background-image: url(../img/bg/bg-desktop.webp);
+    @include retina() {
+      background-image: url(../img/bg/bg-desktop@x2.webp);
+    }
   }
 
   .page-header__slogan {
@@ -161,14 +196,20 @@
     min-height: 395px;
     padding-top: 180px;
     padding-bottom: 110px;
-  
+
     background-image: url(../img/bg/bg-inner-desktop.jpg);
+    @include retina() {
+      background-image: url(../img/bg/bg-inner-desktop@x2.jpg);
+    }
   }
 
   .webp .page-header--inner {
     background-image: url(../img/bg/bg-inner-desktop.webp);
+    @include retina() {
+      background-image: url(../img/bg/bg-inner-desktop@x2.webp);
+    }
   }
-  
+
   .page-header__inner-page-title {
     font-size: 50px;
   }

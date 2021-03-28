@@ -11,6 +11,9 @@
   @include size(100%);
 
   background-image: url(../img/hand-mobile.png);
+  @include retina() {
+    background-image: url(../img/hand-mobile@x2.png);
+  }
   background-repeat: no-repeat;
 
   z-index: 1;
@@ -19,6 +22,9 @@
 
 .webp .hand-slider__background {
   background-image: url(../img/hand-mobile.webp);
+  @include retina() {
+    background-image: url(../img/hand-mobile@x2.webp);
+  }
 }
 
 .hand-slider__screen-wrapper {
@@ -41,24 +47,42 @@
 
   &-1 {
     background-image: url(../img/screens/mobile-screen-1.jpg);
+    @include retina {
+      background-image: url(../img/screens/desktop-screen-1@x2.jpg);
+    }
   }
   &-2 {
     background-image: url(../img/screens/mobile-screen-2.jpg);
+    @include retina {
+      background-image: url(../img/screens/desktop-screen-2@x2.jpg);
+    }
   }
   &-3 {
     background-image: url(../img/screens/mobile-screen-3.jpg);
+    @include retina {
+      background-image: url(../img/screens/desktop-screen-3@x2.jpg);
+    }
   }
 }
 
 .webp .hand-slider__screen {
   &-1 {
     background-image: url(../img/screens/mobile-screen-1.webp);
+    @include retina {
+      background-image: url(../img/screens/desktop-screen-1@x2.webp);
+    }
   }
   &-2 {
     background-image: url(../img/screens/mobile-screen-2.webp);
+    @include retina {
+      background-image: url(../img/screens/desktop-screen-2@x2.webp);
+    }
   }
   &-3 {
     background-image: url(../img/screens/mobile-screen-3.webp);
+    @include retina {
+      background-image: url(../img/screens/desktop-screen-3@x2.webp);
+    }
   }
 }
 
@@ -70,10 +94,16 @@
 
   .hand-slider__background {
     background-image: url(../img/hand-tablet.png);
+    @include retina() {
+      background-image: url(../img/hand-tablet@x2.png);
+    }
   }
 
   .webp .hand-slider__background {
     background-image: url(../img/hand-tablet.webp);
+    @include retina() {
+      background-image: url(../img/hand-tablet@x2.webp);
+    }
   }
 
   .hand-slider__screen-wrapper {
@@ -86,24 +116,42 @@
   .hand-slider__screen {
     &-1 {
       background-image: url(../img/screens/desktop-screen-1.jpg);
+      @include retina {
+        background-image: url(../img/screens/desktop-screen-1@x2.jpg);
+      }
     }
     &-2 {
       background-image: url(../img/screens/desktop-screen-2.jpg);
+      @include retina {
+        background-image: url(../img/screens/desktop-screen-2@x2.jpg);
+      }
     }
     &-3 {
       background-image: url(../img/screens/desktop-screen-3.jpg);
+      @include retina {
+        background-image: url(../img/screens/desktop-screen-3@x2.jpg);
+      }
     }
   }
 
   .webp .hand-slider__screen {
     &-1 {
       background-image: url(../img/screens/desktop-screen-1.webp);
+      @include retina {
+        background-image: url(../img/screens/desktop-screen-1@x2.webp);
+      }
     }
     &-2 {
       background-image: url(../img/screens/desktop-screen-2.webp);
+      @include retina {
+        background-image: url(../img/screens/desktop-screen-2@x2.webp);
+      }
     }
     &-3 {
       background-image: url(../img/screens/desktop-screen-3.webp);
+      @include retina {
+        background-image: url(../img/screens/desktop-screen-3@x2.webp);
+      }
     }
   }
 }
@@ -116,10 +164,16 @@
 
   .hand-slider__background {
     background-image: url(../img/hand-desktop.png);
+    @include retina() {
+      background-image: url(../img/hand-desktop@x2.png);
+    }
   }
 
   .webp .hand-slider__background {
     background-image: url(../img/hand-desktop.webp);
+    @include retina() {
+      background-image: url(../img/hand-desktop@x2.webp);
+    }
   }
 
 
@@ -128,29 +182,5 @@
     left: 570px;
 
     @include size(230px, 408px);
-  }
-
-  .hand-slider__screen {
-    &-1 {
-      background-image: url(../img/screens/desktop-screen-1@x2.jpg);
-    }
-    &-2 {
-      background-image: url(../img/screens/desktop-screen-2@x2.jpg);
-    }
-    &-3 {
-      background-image: url(../img/screens/desktop-screen-3@x2.jpg);
-    }
-  }
-
-  .webp .hand-slider__screen {
-    &-1 {
-      background-image: url(../img/screens/desktop-screen-1@x2.webp);
-    }
-    &-2 {
-      background-image: url(../img/screens/desktop-screen-2@x2.webp);
-    }
-    &-3 {
-      background-image: url(../img/screens/desktop-screen-3@x2.webp);
-    }
   }
 }
