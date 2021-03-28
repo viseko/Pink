@@ -2075,7 +2075,7 @@ a:active {
   border: 2px solid #e5e5e5;
 }
 
-.competition-form__text-input:hover {
+.competition-form__text-input:not(:disabled):hover {
   border-color: #283645;
 }
 
@@ -2104,6 +2104,11 @@ a:active {
   color: inherit;
 }
 
+.competition-form__text-input:disabled {
+  background-color: #e5e5e5;
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .competition-form__textarea {
   resize: vertical;
   height: 200px;
@@ -2129,7 +2134,7 @@ a:active {
   border: 2px solid #e5e5e5;
 }
 
-.competition-form__input-box:hover + label::before {
+.competition-form__input-box:not(:disabled):hover + label::before {
   border-color: #283645;
 }
 
@@ -2137,13 +2142,26 @@ a:active {
   border-color: rgba(40, 54, 69, 0.6);
 }
 
-.competition-form__input-box + label:active::before {
+.competition-form__input-box:not(:disabled) + label:active::before {
   border-color: #d22856;
 }
 
 .competition-form__input-box:checked + label::after {
   content: "";
   position: absolute;
+}
+
+.competition-form__input-box:disabled + label {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: auto;
+}
+
+.competition-form__input-box:disabled + label::before {
+  background-color: #e5e5e5;
+}
+
+.competition-form__input-box:disabled:checked + label::after {
+  opacity: 0.3;
 }
 
 .competition-form__input-box--radio + label::before {
@@ -2281,6 +2299,114 @@ a:active {
 .modal__alert--error .modal__footer {
   padding-top: 10px;
   background-color: transparent;
+}
+
+@-webkit-keyframes bloop {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  30% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bloop {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  30% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #283645;
+}
+
+.nojs .preloader {
+  display: none;
+}
+
+.preloader__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.preloader__image {
+  width: 147px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.preloader__bullets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.preloader__bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #d22856;
+  border-radius: 50%;
+  -webkit-animation: bloop 0.8s linear infinite;
+          animation: bloop 0.8s linear infinite;
+}
+
+.preloader__bullet:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.preloader__bullet:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 @media (min-width: 660px) {
@@ -3794,7 +3920,21 @@ a:active {
 }
 
 @media (max-width: 959px) {
-  .main-nav._active {
+  .nojs .main-nav {
+    position: static;
+  }
+
+  .nojs .main-nav__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .nojs .main-nav__toggler {
+    display: none;
+  }
+
+  .main-nav._active,
+  .nojs .main-nav {
     background-color: #283645;
   }
 
@@ -3816,7 +3956,15 @@ a:active {
             transform-origin: top;
   }
 
-  ._active .main-nav__list {
+  .nojs .main-nav__list {
+    position: static;
+    margin-top: 30px;
+    border-right: 1px solid #000;
+    border-left: 1px solid #3b4f65;
+  }
+
+  ._active .main-nav__list,
+  .nojs .main-nav__list {
     -webkit-transform: scaleY(1);
         -ms-transform: scaleY(1);
             transform: scaleY(1);
