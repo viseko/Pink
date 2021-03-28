@@ -15,63 +15,62 @@
 </head>
 <body>
 
+  <nav class="page-header__nav main-nav">
+    <div class="wrapper main-nav__wrapper">
+      @@if (page === "index") {
+        <a class="main-nav__logo">
+      }
+      @@if (page !== "index") {
+        <a href="index.html" class="main-nav__logo">
+      }
+        @@include("_logo-header.html")
+      </a>
+      <button class="main-nav__toggler burger-btn">
+        <span class="burger-btn__line"></span>
+        <span class="burger-btn__line"></span>
+        <span class="burger-btn__line"></span>
+        <span class="visually-hidden">Меню</span>
+      </button>
+      <ul class="main-nav__list">
+          @@if (page === "index") {
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Главная</a>
+          }
+          @@if (page !== "index") {
+            <li class="main-nav__item">
+            <a href="index.html" class="main-nav__link">Главная</a>
+          }
+        </li>
+        @@if (page === "photo") {
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Фотографии</a>
+          }
+        @@if (page !== "photo") {
+          <li class="main-nav__item">
+          <a href="photo.html" class="main-nav__link">Фотографии</a>
+        }
+        </li>
+        @@if (page === "form") {
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Конкурс</a>
+          }
+        @@if (page !== "form") {
+          <li class="main-nav__item">
+          <a href="form.html" class="main-nav__link">Конкурс</a>
+        }
+        </li>
+        <li class="main-nav__item">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML Academy</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   @@if (page === "index") {
     <header class="page-header">
   }
   @@if (page !== "index") {
     <header class="page-header page-header--inner">
   }
-    <nav class="page-header__nav main-nav">
-      <div class="wrapper main-nav__wrapper">
-        @@if (page === "index") {
-          <a class="main-nav__logo">
-        }
-        @@if (page !== "index") {
-          <a href="index.html" class="main-nav__logo">
-        }
-          @@include("_logo-header.html")
-        </a>
-        <button class="main-nav__toggler burger-btn">
-          <span class="burger-btn__line"></span>
-          <span class="burger-btn__line"></span>
-          <span class="burger-btn__line"></span>
-          <span class="visually-hidden">Меню</span>
-        </button>
-        <ul class="main-nav__list">
-            @@if (page === "index") {
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link">Главная</a>
-            }
-            @@if (page !== "index") {
-              <li class="main-nav__item">
-              <a href="index.html" class="main-nav__link">Главная</a>
-            }
-          </li>
-          @@if (page === "photo") {
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link">Фотографии</a>
-            }
-          @@if (page !== "photo") {
-            <li class="main-nav__item">
-            <a href="photo.html" class="main-nav__link">Фотографии</a>
-          }
-          </li>
-          @@if (page === "form") {
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link">Конкурс</a>
-            }
-          @@if (page !== "form") {
-            <li class="main-nav__item">
-            <a href="form.html" class="main-nav__link">Конкурс</a>
-          }
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
     @@if (page === "index") {
       <h1 class="visually-hidden">Мобильное приложение Pink</h1>
       <div class="page-header__background">

@@ -191,6 +191,10 @@
   &:disabled + label::before {
     background-color: $cl-gray;
   }
+
+  &:disabled:checked + label::after {
+    opacity: 0.3;
+  }
 }
 
 .competition-form__input-box--radio {

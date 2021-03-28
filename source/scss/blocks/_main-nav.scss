@@ -87,7 +87,20 @@
 
 // Оформление выпадающего меню для мобильной и планшетной версий
 @media (max-width: $desktop-width - 1px) {
-  .main-nav._active {
+  .nojs .main-nav {
+    position: static;
+  }
+
+  .nojs .main-nav__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .nojs .main-nav__toggler {
+    display: none;
+  }
+
+  .main-nav._active,
+  .nojs .main-nav {
     background-color: $cl-blue;
   }
 
@@ -106,7 +119,16 @@
     transform-origin: top;
   }
 
-  ._active .main-nav__list {
+  .nojs .main-nav__list {
+    position: static;
+    margin-top: 30px;
+
+    border-right: 1px solid #000;
+    border-left: 1px solid lighten($cl-blue, 10%);
+  }
+
+  ._active .main-nav__list,
+  .nojs .main-nav__list {
     transform: scaleY(1);
   }
 
