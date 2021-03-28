@@ -1,9 +1,12 @@
+// Отключение nojs у документа
 let nojs = document.querySelector('html.nojs');
 
 if (nojs) {
   nojs.removeAttribute('class');
 
 };
+
+// Проверка клиента на поддержку webp
 // Взято здесь: https://gist.github.com/Protoff/d6643387f03d47b44b2d7c3cf7b3e0a0
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -18,13 +21,7 @@ function testWebP(elem) {
   }
 };
 
-const handSlider = new Swiper('.hand-slider__screen-wrapper', {
-  loop: true,
-
-  autoplay: {
-    delay: 3000,
-  }
-});;
+// Оживление мобильного меню
 const burgerBtn = document.querySelector('.burger-btn');
 const navPanel = document.querySelector('.main-nav');
 
@@ -32,6 +29,16 @@ burgerBtn.addEventListener('click', function() {
   navPanel.classList.toggle('_active');
 });;
 
+// Подключение swiper для слайдера в промо-блоке
+const handSlider = new Swiper('.hand-slider__screen-wrapper', {
+  loop: true,
+
+  autoplay: {
+    delay: 3000,
+  }
+});;
+
+// Подключение swiper для слайдера с отзывами
 const reviewSlider = new Swiper('.reviews-slider__container', {
   loop: true,
   wrapperClass: 'reviews-slider__list',
@@ -62,6 +69,7 @@ if (document.querySelector('.reviews-slider__container')) {
 
 ;
 
+// Подключение swiper для мобильной версии таблицы тарифов
 (function() {
   /*
   Активируем слайдер на мобильном экране
@@ -105,6 +113,7 @@ if (document.querySelector('.reviews-slider__container')) {
   breakpointChecker();
 })();;
 
+// Подключение яндекс-карты
 (function () {
     const mapWrapper = document.querySelector('.map__interactive');
     let mapLoading = false;
@@ -177,6 +186,7 @@ if (document.querySelector('.reviews-slider__container')) {
 
 })();;
 
+// Табы для мобильной версии формы отправки фото
 (function() {
 
   const filter = document.querySelector('.photo-post__filters');
@@ -252,6 +262,7 @@ if (document.querySelector('.reviews-slider__container')) {
 
 })();;
 
+// Скрипт для валидации и отправки формы на странице form.html
 const
   competitionForm = document.querySelector('.competition-form'),
   modalWrapper = document.querySelector('.modal__wrapper'),
