@@ -2335,6 +2335,26 @@ a:active {
   }
 }
 
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .preloader {
   position: fixed;
   top: 0;
@@ -2352,6 +2372,8 @@ a:active {
   width: 100vw;
   height: 100vh;
   background-color: #283645;
+  -webkit-animation: appear 0.2s;
+          animation: appear 0.2s;
 }
 
 .nojs .preloader {
