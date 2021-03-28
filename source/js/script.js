@@ -24,3 +24,6 @@
 
 // Скрипт для валидации и отправки формы на странице form.html
 @@include("_form-validation.js");
+
+// Прелоадер
+@@include("_preloader.js");
