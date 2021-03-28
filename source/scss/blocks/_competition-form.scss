@@ -17,7 +17,7 @@
 }
 
 // Группы полей
-.competition-form__fieldset { 
+.competition-form__fieldset {
   margin: 0;
   margin-bottom: 44px;
   padding: 0 20px;
@@ -113,7 +113,7 @@
 
   border: 2px solid $cl-gray;
 
-  &:hover {
+  &:not(:disabled):hover {
     border-color: $cl-blue;
   }
 
@@ -124,6 +124,11 @@
 
   &::placeholder {
     color: inherit;
+  }
+
+  &:disabled {
+    background-color: $cl-gray;
+    color: rgba(#000, 0.3);
   }
 }
 
@@ -160,7 +165,7 @@
     border: 2px solid $cl-gray;
   }
 
-  &:hover + label::before {
+  &:not(:disabled):hover + label::before {
     border-color: $cl-blue;
   }
 
@@ -168,13 +173,23 @@
     border-color: rgba($cl-blue, 0.6);
   }
 
-  & + label:active::before {
+  &:not(:disabled) + label:active::before {
     border-color: $cl-pink;
   }
-  
+
   &:checked + label::after {
     content: "";
     position: absolute;
+  }
+
+  &:disabled + label {
+    color: rgba(#000, 0.3);
+
+    cursor: auto;
+  }
+
+  &:disabled + label::before {
+    background-color: $cl-gray;
   }
 }
 
@@ -186,7 +201,7 @@
   &:checked + label::after {
     top: 11px;
     left: 11px;
-    
+
     @include size(14px);
 
     background-color: $cl-pink;
@@ -202,7 +217,7 @@
   &:checked + label::after {
     top: 10px;
     left: 8px;
-    
+
     @include size(22px, 16px);
 
     background-image: url(../img/svg/checkbox.svg);
@@ -250,7 +265,7 @@
     padding-right: 0;
     margin-bottom: 55px;
   }
-  
+
   .competition-form__fieldset--bordered {
     padding-left: 60px;
     padding-right: 60px;
@@ -278,7 +293,7 @@
   }
 
   // Обёртки для инпутов
-  
+
   .competition-form__text-input-wrapper--passport {
     flex-direction: row;
     align-items: center;
@@ -313,7 +328,7 @@
     position: absolute;
     top: 2px;
     right: 2px;
-    
+
     display: block;
     @include size(58px, 56px);
 
