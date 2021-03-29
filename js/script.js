@@ -23,12 +23,13 @@ function testWebP(elem) {
 };
 
 // Оживление мобильного меню
-const burgerBtn = document.querySelector('.burger-btn');
-const navPanel = document.querySelector('.main-nav');
+// // const burgerBtn = document.querySelector('.burger-btn');
+// const navPanel = document.querySelector('.main-nav');
 
-burgerBtn.addEventListener('click', function() {
-  navPanel.classList.toggle('_active');
-});;
+// burgerBtn.addEventListener('click', function() {
+//   navPanel.classList.toggle('_active');
+// });
+;
 
 // Подключение swiper для слайдера в промо-блоке
 const handSlider = new Swiper('.hand-slider__screen-wrapper', {
