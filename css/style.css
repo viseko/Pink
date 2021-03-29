@@ -1151,10 +1151,13 @@ a:active {
   list-style: none;
   padding-top: 50px;
   padding-bottom: 280px;
-  background-image: url(../img/advantages/iphone-screen3.png);
   background-size: 157px 320px;
   background-position: center calc(100% + 43px);
   background-repeat: no-repeat;
+}
+
+.no-webp .advantages__list {
+  background-image: url(../img/advantages/iphone-screen3.png);
 }
 
 .webp .advantages__list {
@@ -2674,17 +2677,21 @@ a:active {
     left: 0;
     width: 268px;
     height: 547px;
-    background-image: url(../img/advantages/iphone-screen3@x2.png);
     background-position: left top;
     background-size: cover;
   }
 
-  .webp .advantages__list {
+  .webp .advantages__list,
+  .no-webp .advantages__list {
     background-image: none;
   }
 
   .webp .advantages__list::before {
     background-image: url(../img/advantages/iphone-screen3@x2.webp);
+  }
+
+  .no-webp .advantages__list::before {
+    background-image: url(../img/advantages/iphone-screen3@x2.png);
   }
 
   .advantages__item {
@@ -4128,7 +4135,7 @@ a:active {
     background-image: url(../img/screens/mobile-screen-3@x2.webp);
   }
 
-  .advantages__list {
+  .no-webp .advantages__list {
     background-image: url(../img/advantages/iphone-screen3@x2.png);
   }
 
