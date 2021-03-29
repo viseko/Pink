@@ -742,9 +742,16 @@ a:active {
 .page-header__background {
   position: relative;
   height: 462px;
-  background-image: url(../img/bg/bg-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.no-webp .page-header__background {
+  background-image: url(../img/bg/bg-mobile.jpg);
+}
+
+.webp .page-header__background {
+  background-image: url(../img/bg/bg-mobile.webp);
 }
 
 .page-header__hand {
@@ -778,10 +785,13 @@ a:active {
   min-height: 237px;
   padding-top: 86px;
   padding-bottom: 20px;
-  background-image: url(../img/bg/bg-inner-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.no-webp .page-header--inner {
+  background-image: url(../img/bg/bg-inner-mobile.jpg);
 }
 
 .webp .page-header--inner {
@@ -964,11 +974,14 @@ a:active {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/hand-mobile.png);
   background-repeat: no-repeat;
   background-size: 320px 314px;
   z-index: 1;
   pointer-events: none;
+}
+
+.no-webp .hand-slider__background {
+  background-image: url(../img/hand-mobile.png);
 }
 
 .webp .hand-slider__background {
@@ -992,24 +1005,24 @@ a:active {
   background-position: center;
 }
 
-.hand-slider__screen-1 {
+.no-webp .hand-slider__screen-1 {
   background-image: url(../img/screens/mobile-screen-1.jpg);
-}
-
-.hand-slider__screen-2 {
-  background-image: url(../img/screens/mobile-screen-2.jpg);
-}
-
-.hand-slider__screen-3 {
-  background-image: url(../img/screens/mobile-screen-3.jpg);
 }
 
 .webp .hand-slider__screen-1 {
   background-image: url(../img/screens/mobile-screen-1.webp);
 }
 
+.no-webp .hand-slider__screen-2 {
+  background-image: url(../img/screens/mobile-screen-2.jpg);
+}
+
 .webp .hand-slider__screen-2 {
   background-image: url(../img/screens/mobile-screen-2.webp);
+}
+
+.no-webp .hand-slider__screen-3 {
+  background-image: url(../img/screens/mobile-screen-3.jpg);
 }
 
 .webp .hand-slider__screen-3 {
@@ -2489,6 +2502,9 @@ a:active {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .no-webp .page-header__background {
     background-image: url(../img/bg/bg-tablet.jpg);
   }
 
@@ -2541,6 +2557,9 @@ a:active {
     height: auto;
     padding-top: 140px;
     padding-bottom: 100px;
+  }
+
+  .no-webp .page-header--inner {
     background-image: url(../img/bg/bg-inner-tablet.jpg);
   }
 
@@ -2579,8 +2598,11 @@ a:active {
   }
 
   .hand-slider__background {
-    background-image: url(../img/hand-tablet.png);
     background-size: contain;
+  }
+
+  .no-webp .hand-slider__background {
+    background-image: url(../img/hand-tablet.png);
   }
 
   .webp .hand-slider__background {
@@ -2594,24 +2616,24 @@ a:active {
     height: 346px;
   }
 
-  .hand-slider__screen-1 {
+  .no-webp .hand-slider__screen-1 {
     background-image: url(../img/screens/desktop-screen-1.jpg);
-  }
-
-  .hand-slider__screen-2 {
-    background-image: url(../img/screens/desktop-screen-2.jpg);
-  }
-
-  .hand-slider__screen-3 {
-    background-image: url(../img/screens/desktop-screen-3.jpg);
   }
 
   .webp .hand-slider__screen-1 {
     background-image: url(../img/screens/desktop-screen-1.webp);
   }
 
+  .no-webp .hand-slider__screen-2 {
+    background-image: url(../img/screens/desktop-screen-2.jpg);
+  }
+
   .webp .hand-slider__screen-2 {
     background-image: url(../img/screens/desktop-screen-2.webp);
+  }
+
+  .no-webp .hand-slider__screen-3 {
+    background-image: url(../img/screens/desktop-screen-3.jpg);
   }
 
   .webp .hand-slider__screen-3 {
@@ -3243,7 +3265,7 @@ a:active {
 }
 
 @media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 660px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 660px) and (min-resolution: 144dpi), (min-width: 660px) and (min-resolution: 1.5dppx) {
-  .page-header__background {
+  .no-webp .page-header__background {
     background-image: url(../img/bg/bg-tablet@x2.jpg);
   }
 
@@ -3251,7 +3273,7 @@ a:active {
     background-image: url(../img/bg/bg-tablet@x2.webp);
   }
 
-  .page-header--inner {
+  .no-webp .page-header--inner {
     background-image: url(../img/bg/bg-inner-tablet@x2.jpg);
   }
 
@@ -3259,7 +3281,7 @@ a:active {
     background-image: url(../img/bg/bg-inner-tablet@x2.webp);
   }
 
-  .hand-slider__background {
+  .no-webp .hand-slider__background {
     background-image: url(../img/hand-tablet@x2.png);
   }
 
@@ -3267,24 +3289,24 @@ a:active {
     background-image: url(../img/hand-tablet@x2.webp);
   }
 
-  .hand-slider__screen-1 {
+  .no-webp .hand-slider__screen-1 {
     background-image: url(../img/screens/desktop-screen-1@x2.jpg);
-  }
-
-  .hand-slider__screen-2 {
-    background-image: url(../img/screens/desktop-screen-2@x2.jpg);
-  }
-
-  .hand-slider__screen-3 {
-    background-image: url(../img/screens/desktop-screen-3@x2.jpg);
   }
 
   .webp .hand-slider__screen-1 {
     background-image: url(../img/screens/desktop-screen-1@x2.webp);
   }
 
+  .no-webp .hand-slider__screen-2 {
+    background-image: url(../img/screens/desktop-screen-2@x2.jpg);
+  }
+
   .webp .hand-slider__screen-2 {
     background-image: url(../img/screens/desktop-screen-2@x2.webp);
+  }
+
+  .no-webp .hand-slider__screen-3 {
+    background-image: url(../img/screens/desktop-screen-3@x2.jpg);
   }
 
   .webp .hand-slider__screen-3 {
@@ -3320,7 +3342,7 @@ a:active {
     padding-bottom: 70px;
   }
 
-  .page-header__background {
+  .no-webp .page-header__background {
     background-image: url(../img/bg/bg-desktop.jpg);
   }
 
@@ -3338,6 +3360,9 @@ a:active {
     min-height: 395px;
     padding-top: 180px;
     padding-bottom: 110px;
+  }
+
+  .no-webp .page-header--inner {
     background-image: url(../img/bg/bg-inner-desktop.jpg);
   }
 
@@ -3417,7 +3442,7 @@ a:active {
     height: 645px;
   }
 
-  .hand-slider__background {
+  .no-webp .hand-slider__background {
     background-image: url(../img/hand-desktop.png);
   }
 
@@ -3931,7 +3956,7 @@ a:active {
 }
 
 @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 960px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 960px) and (min-resolution: 144dpi), (min-width: 960px) and (min-resolution: 1.5dppx) {
-  .page-header__background {
+  .no-webp .page-header__background {
     background-image: url(../img/bg/bg-desktop@x2.jpg);
   }
 
@@ -3939,7 +3964,7 @@ a:active {
     background-image: url(../img/bg/bg-desktop@x2.webp);
   }
 
-  .page-header--inner {
+  .no-webp .page-header--inner {
     background-image: url(../img/bg/bg-inner-desktop@x2.jpg);
   }
 
@@ -3947,7 +3972,7 @@ a:active {
     background-image: url(../img/bg/bg-inner-desktop@x2.webp);
   }
 
-  .hand-slider__background {
+  .no-webp .hand-slider__background {
     background-image: url(../img/hand-desktop@x2.png);
   }
 
@@ -4055,11 +4080,15 @@ a:active {
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .page-header__background {
+  .no-webp .page-header__background {
     background-image: url(../img/bg/bg-mobile@x2.jpg);
   }
 
-  .page-header--inner {
+  .webp .page-header__background {
+    background-image: url(../img/bg/bg-mobile@x2.webp);
+  }
+
+  .no-webp .page-header--inner {
     background-image: url(../img/bg/bg-inner-mobile@x2.jpg);
   }
 
@@ -4067,7 +4096,7 @@ a:active {
     background-image: url(../img/bg/bg-inner-mobile@x2.webp);
   }
 
-  .hand-slider__background {
+  .no-webp .hand-slider__background {
     background-image: url(../img/hand-mobile@x2.png);
   }
 
@@ -4075,28 +4104,28 @@ a:active {
     background-image: url(../img/hand-mobile@x2.webp);
   }
 
-  .hand-slider__screen-1 {
-    background-image: url(../img/screens/desktop-screen-1@x2.jpg);
-  }
-
-  .hand-slider__screen-2 {
-    background-image: url(../img/screens/desktop-screen-2@x2.jpg);
-  }
-
-  .hand-slider__screen-3 {
-    background-image: url(../img/screens/desktop-screen-3@x2.jpg);
+  .no-webp .hand-slider__screen-1 {
+    background-image: url(../img/screens/mobile-screen-1@x2.jpg);
   }
 
   .webp .hand-slider__screen-1 {
-    background-image: url(../img/screens/desktop-screen-1@x2.webp);
+    background-image: url(../img/screens/mobile-screen-1@x2.webp);
+  }
+
+  .no-webp .hand-slider__screen-2 {
+    background-image: url(../img/screens/mobile-screen-2@x2.jpg);
   }
 
   .webp .hand-slider__screen-2 {
-    background-image: url(../img/screens/desktop-screen-2@x2.webp);
+    background-image: url(../img/screens/mobile-screen-2@x2.webp);
+  }
+
+  .no-webp .hand-slider__screen-3 {
+    background-image: url(../img/screens/mobile-screen-3@x2.jpg);
   }
 
   .webp .hand-slider__screen-3 {
-    background-image: url(../img/screens/desktop-screen-3@x2.webp);
+    background-image: url(../img/screens/mobile-screen-3@x2.webp);
   }
 
   .advantages__list {
