@@ -1836,7 +1836,6 @@ a:active {
   width: 100%;
   height: 100%;
   font-size: 0;
-  background-image: url(../img/photos/photo-7-mobile.jpg);
   background-size: cover;
   background-color: #283645;
   cursor: pointer;
@@ -1844,6 +1843,10 @@ a:active {
 
 .photo-post__image-attach-wrapper [type="file"]::-webkit-file-upload-button {
   display: none;
+}
+
+.no-webp .photo-post__image-attach-wrapper [type="file"] {
+  background-image: url(../img/photos/photo-7-mobile.jpg);
 }
 
 .webp .photo-post__image-attach-wrapper [type="file"] {
@@ -3016,7 +3019,7 @@ a:active {
     margin-right: 47px;
   }
 
-  .photo-post__image-attach-wrapper [type="file"] {
+  .no-webp .photo-post__image-attach-wrapper [type="file"] {
     background-image: url(../img/photos/photo-7-tablet.jpg);
   }
 
@@ -3320,7 +3323,7 @@ a:active {
     background-image: url(../img/screens/desktop-screen-3@x2.webp);
   }
 
-  .photo-post__image-attach-wrapper [type="file"] {
+  .no-webp .photo-post__image-attach-wrapper [type="file"] {
     background-image: url(../img/photos/photo-7-tablet@x2.jpg);
   }
 
@@ -4146,7 +4149,7 @@ a:active {
     background-image: url(../img/advantages/iphone-screen3@x2.webp);
   }
 
-  .photo-post__image-attach-wrapper [type="file"] {
+  .no-webp .photo-post__image-attach-wrapper [type="file"] {
     background-image: url(../img/photos/photo-7-mobile@x2.jpg);
   }
 
