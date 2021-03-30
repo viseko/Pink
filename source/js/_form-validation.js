@@ -23,13 +23,17 @@ function tryToSubmit(e) {
 
   if (competitionForm.checkValidity()) {
     submitFormData();
+
+    competitionForm.classList.remove('_invalid');
   } else {
     showModal(modalFormError);
+
+    competitionForm.classList.add('_invalid');
   }
 }
 
 function submitFormData() {
-  // Здесь "отправляем данные формы аяксом" и очищаем форму
+  // Здесь типа отправляем данные формы аяксом и очищаем форму
   competitionForm.reset();
 
   showModal(modalFormSuccess);

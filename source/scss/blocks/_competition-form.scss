@@ -113,7 +113,7 @@
 
   border: 2px solid $cl-gray;
 
-  &:not(:disabled):hover {
+  &:not(:disabled):not(:focus):hover {
     border-color: $cl-blue;
   }
 
@@ -130,6 +130,10 @@
     background-color: $cl-gray;
     color: rgba(#000, 0.3);
   }
+}
+
+._invalid .competition-form__text-input:invalid {
+  background-color: rgba($cl-pink, 0.1);
 }
 
 .competition-form__textarea {
