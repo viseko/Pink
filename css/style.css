@@ -3514,7 +3514,6 @@ a:active {
             transform: translateX(-50%);
     width: 221px;
     height: 301px;
-    background-image: url(../img/iphone.png), url(../img/advantages/adv-border.png);
     background-repeat: no-repeat;
     background-size: 186px 382px, 120% auto;
     background-position: center top, center calc(100% + 7px);
@@ -3534,32 +3533,36 @@ a:active {
     background-position: top center;
   }
 
-  .advantages__item--mood::after {
-    background-image: url(../img/advantages/adv-screen-1.png);
-  }
-
-  .advantages__item--change::after {
-    background-image: url(../img/advantages/adv-screen-2.png);
-  }
-
-  .advantages__item--friends::after {
-    background-image: url(../img/advantages/adv-screen-3.png);
+  .no-webp .advantages__item::before {
+    background-image: url(../img/iphone.png), url(../img/advantages/adv-border.png);
   }
 
   .webp .advantages__item::before {
     background-image: url(../img/iphone.webp), url(../img/advantages/adv-border.webp);
   }
 
+  .no-webp .advantages__item--mood::after {
+    background-image: url(../img/advantages/adv-screen-1.png);
+  }
+
   .webp .advantages__item--mood::after {
     background-image: url(../img/advantages/adv-screen-1.webp);
+  }
+
+  .no-webp .advantages__item--change::after {
+    background-image: url(../img/advantages/adv-screen-2.png);
   }
 
   .webp .advantages__item--change::after {
     background-image: url(../img/advantages/adv-screen-2.webp);
   }
 
+  .no-webp .advantages__item--friends::after {
+    background-image: url(../img/advantages/adv-screen-2.png);
+  }
+
   .webp .advantages__item--friends::after {
-    background-image: url(../img/advantages/adv-screen-3.webp);
+    background-image: url(../img/advantages/adv-screen-2.webp);
   }
 
   .advantages__title {
@@ -3987,36 +3990,36 @@ a:active {
     background-image: url(../img/hand-desktop@x2.webp);
   }
 
-  .advantages__item::before {
+  .no-webp .advantages__item::before {
     background-image: url(../img/iphone@x2.png), url(../img/advantages/adv-border.png);
-  }
-
-  .advantages__item--mood::after {
-    background-image: url(../img/advantages/adv-screen-1@x2.png);
-  }
-
-  .advantages__item--change::after {
-    background-image: url(../img/advantages/adv-screen-2@x2.png);
-  }
-
-  .advantages__item--friends::after {
-    background-image: url(../img/advantages/adv-screen-3@x2.png);
   }
 
   .webp .advantages__item::before {
     background-image: url(../img/iphone@x2.webp), url(../img/advantages/adv-border.webp);
   }
 
+  .no-webp .advantages__item--mood::after {
+    background-image: url(../img/advantages/adv-screen-1@x2.png);
+  }
+
   .webp .advantages__item--mood::after {
     background-image: url(../img/advantages/adv-screen-1@x2.webp);
+  }
+
+  .no-webp .advantages__item--change::after {
+    background-image: url(../img/advantages/adv-screen-2@x2.png);
   }
 
   .webp .advantages__item--change::after {
     background-image: url(../img/advantages/adv-screen-2@x2.webp);
   }
 
+  .no-webp .advantages__item--friends::after {
+    background-image: url(../img/advantages/adv-screen-2@x2.png);
+  }
+
   .webp .advantages__item--friends::after {
-    background-image: url(../img/advantages/adv-screen-3@x2.webp);
+    background-image: url(../img/advantages/adv-screen-2@x2.webp);
   }
 }
 
