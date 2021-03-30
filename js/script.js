@@ -1,10 +1,4 @@
 // Отключение nojs у документа
-let nojs = document.querySelector('.nojs');
-
-if (nojs) {
-  nojs.removeAttribute('class');
-
-}
 ;
 
 // Проверка клиента на поддержку webp
