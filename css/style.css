@@ -4046,6 +4046,9 @@ a:active {
     background-color: #283645;
     top: 100%;
     left: 0px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
     -webkit-transform: scaleY(0);
         -ms-transform: scaleY(0);
             transform: scaleY(0);
@@ -4066,12 +4069,6 @@ a:active {
     -webkit-transform: scaleY(1);
         -ms-transform: scaleY(1);
             transform: scaleY(1);
-  }
-
-  ._active .main-nav__list {
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
   }
 
   .main-nav__item {
