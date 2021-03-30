@@ -2140,7 +2140,7 @@ a:active {
   border: 2px solid #e5e5e5;
 }
 
-.competition-form__text-input:not(:disabled):hover {
+.competition-form__text-input:not(:disabled):not(:focus):hover {
   border-color: #283645;
 }
 
@@ -2172,6 +2172,10 @@ a:active {
 .competition-form__text-input:disabled {
   background-color: #e5e5e5;
   color: rgba(0, 0, 0, 0.3);
+}
+
+._invalid .competition-form__text-input:invalid {
+  background-color: rgba(210, 40, 86, 0.1);
 }
 
 .competition-form__textarea {
