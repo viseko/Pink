@@ -4,8 +4,8 @@
     @font-face {
         font-family: $font-name;
         font-display: swap;
-        src: url("../fonts/#{$file-name}.woff") format("woff"),
-            url("../fonts/#{$file-name}.woff") format("woff2");
+        src: url("../fonts/#{$file-name}.woff") format("woff2"),
+            url("../fonts/#{$file-name}.woff") format("woff");
         font-weight: #{$weight};
         font-style: #{$style};
     }
@@ -84,4 +84,24 @@
     (min-resolution: $retina-dppx) {
       @content;
     }
+}
+
+// Гибкая задание версий фоновой картинки с webp и для retina
+// "class" - селектор блока, к которому применяем фон
+// "url" - шаблон url подключаемой картинки, без указания формата
+// "format" - основной формат файла
+@mixin css-background($class, $url, $format) {
+  .no-webp #{$class} {
+      background-image: url(#{$url}.#{$format});
+      @include retina {
+          background-image: url(#{$url}@x2.#{$format});
+      }
+  }
+
+  .webp #{$class} {
+      background-image: url(#{$url}.webp);
+      @include retina {
+          background-image: url(#{$url}@x2.webp);
+      }
+  }
 }

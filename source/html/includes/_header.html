@@ -4,28 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сайт вымышленного мобильного приложения Pink. Адаптивная вёрстка учебного макета от HTML-Academy">
   <title>@@title</title>
   <link rel="preload" href="img/svg/logo-desktop.svg" as="image">
   <link rel="stylesheet" href="css/style.min.css">
   <!-- Favicons -->
   <link rel="icon" href="favicon.svg">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Removing nojs class -->
+  <script>
+    let nojs = document.querySelector('.nojs');
+
+    if (nojs) {
+      nojs.removeAttribute('class');
+    }
+  </script>
   <!-- Swiper JS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
-
   <nav class="page-header__nav main-nav">
     <div class="wrapper main-nav__wrapper">
       @@if (page === "index") {
-        <a class="main-nav__logo">
+        <span class="main-nav__logo">
+          @@include("_logo-header.html")
+        </span>
       }
       @@if (page !== "index") {
         <a href="index.html" class="main-nav__logo">
+          @@include("_logo-header.html")
+        </a>
       }
-        @@include("_logo-header.html")
-      </a>
       <button class="main-nav__toggler burger-btn">
         <span class="burger-btn__line"></span>
         <span class="burger-btn__line"></span>
@@ -35,7 +44,7 @@
       <ul class="main-nav__list">
           @@if (page === "index") {
           <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link">Главная</a>
+            <span class="main-nav__link">Главная</span>
           }
           @@if (page !== "index") {
             <li class="main-nav__item">
@@ -44,7 +53,7 @@
         </li>
         @@if (page === "photo") {
           <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link">Фотографии</a>
+            <span class="main-nav__link">Фотографии</span>
           }
         @@if (page !== "photo") {
           <li class="main-nav__item">
@@ -53,7 +62,7 @@
         </li>
         @@if (page === "form") {
           <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link">Конкурс</a>
+            <span class="main-nav__link">Конкурс</span>
           }
         @@if (page !== "form") {
           <li class="main-nav__item">
@@ -61,7 +70,7 @@
         }
         </li>
         <li class="main-nav__item">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML Academy</a>
+          <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer">HTML Academy</a>
         </li>
       </ul>
     </div>
@@ -96,13 +105,13 @@
             <article class="page-header__stores app-stores">
               <ul class="app-stores__links">
                 <li>
-                  <a href="https://www.apple.com/" class="app-stores__link app-stores__link--ios">AppStore</a>
+                  <a class="app-stores__link app-stores__link--ios" href="https://www.apple.com/" target="_blank" rel="noopener noreferrer">AppStore</a>
                 </li>
                 <li>
-                  <a href="https://play.google.com/" class="app-stores__link app-stores__link--android">PlayMarket</a>
+                  <a class="app-stores__link app-stores__link--android" href="https://play.google.com/" target="_blank" rel="noopener noreferrer">PlayMarket</a>
                 </li>
                 <li>
-                  <a href="https://www.microsoft.com/ru-RU/store/apps" class="app-stores__link app-stores__link--windows">Microsoft Store</a>
+                  <a class="app-stores__link app-stores__link--windows" href="https://www.microsoft.com/ru-RU/store/apps" target="_blank" rel="noopener noreferrer">Microsoft Store</a>
                 </li>
               </ul>
               <p class="app-stores__text">

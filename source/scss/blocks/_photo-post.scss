@@ -17,10 +17,6 @@
 
     font-size: 0;
 
-    background-image: url(../img/photos/photo-7-mobile.jpg);
-    @include retina() {
-      background-image: url(../img/photos/photo-7-mobile@x2.jpg);
-    }
     background-size: cover;
     background-color: $cl-blue;
 
@@ -32,14 +28,7 @@
   }
 }
 
-.webp .photo-post__image-attach-wrapper {
-  [type="file"] {
-    background-image: url(../img/photos/photo-7-mobile.webp);
-    @include retina() {
-      background-image: url(../img/photos/photo-7-mobile@x2.webp);
-    }
-  }
-}
+@include css-background(".photo-post__image-attach-wrapper [type=\"file\"]", "../img/photos/photo-7-mobile", "jpg");
 
 .photo-post__controls-wrapper {
   display: flex;
@@ -187,23 +176,9 @@
     @include size(300px, 400px);
     margin-bottom: 0;
     margin-right: 47px;
-
-    [type="file"] {
-      background-image: url(../img/photos/photo-7-tablet.jpg);
-      @include retina() {
-        background-image: url(../img/photos/photo-7-tablet@x2.jpg);
-      }
-    }
   }
 
-  .webp .photo-post__image-attach-wrapper {
-    [type="file"] {
-      background-image: url(../img/photos/photo-7-tablet.webp);
-      @include retina() {
-        background-image: url(../img/photos/photo-7-tablet@x2.webp);
-      }
-    }
-  }
+  @include css-background(".photo-post__image-attach-wrapper [type=\"file\"]", "../img/photos/photo-7-tablet", "jpg");
 
   .photo-post__controls-wrapper {
     flex-grow: 1;

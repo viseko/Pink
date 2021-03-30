@@ -9,11 +9,14 @@
   <div class="page-footer__wrapper wrapper">
     @@if (innerPage === "true") {
       <a href="index.html" class="page-footer__logo">
+        @@include("_logo-footer.html")
+      </a>
     }
     @@if (innerPage === "false") {
-      <a class="page-footer__logo">
+      <span class="page-footer__logo">
+        @@include("_logo-footer.html")
+      </span>
     }
-      @@include("_logo-footer.html")
     </a>
     <article class="page-footer__social social">
       <a href="#" class="social__ico">
@@ -35,7 +38,7 @@
         </svg>
       </a>
     </article>
-    <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright">
+    <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer">
       <span>Разработано</span>
       <svg class="footer__copyright" width="27" height="34">
         <use xlink:href="img/sprite.svg#svg--ico-html-logo"></use>

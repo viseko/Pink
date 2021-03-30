@@ -5,7 +5,7 @@
     if (mapWrapper) {
         prepareMap();
     }
-    
+
     function prepareMap() {
         mapWrapper.addEventListener("click", loadMap);
     }
@@ -13,6 +13,10 @@
     function loadMap() {
         if (!mapLoading) {
             mapLoading = true;
+
+            const mapMessage = mapWrapper.querySelector('p');
+            mapMessage.innerHTML = 'Загрузка карты..';
+
             const script = document.createElement('script');
             script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
 
@@ -22,13 +26,13 @@
             const poll = function() {
                 setTimeout(function() {
                     timeout--;
-                    
+
                     if (typeof ymaps !== 'undefined') {
                         ymaps.ready(initMap);
                     } else if (timeout > 0) {
                         poll();
                     } else {
-                        console.log('Не удалось загрузить карту');
+                      mapMessage.innerHTML = 'Не удалось загрузить карту :(';
                     }
                 }, 100);
             };

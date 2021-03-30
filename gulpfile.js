@@ -45,7 +45,6 @@ const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const webpHTML = require("gulp-webp-html");
-// const webpCSS = require("gulp-webp-css"); // пока тут какой-то косяк, да и не особо нужно
 const svgSprite = require("gulp-svg-sprite");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
@@ -96,7 +95,7 @@ function js() {
     src(path.src.js)
         .pipe(fileInclude())
         .pipe(dest(path.build.js))
-    
+
     return src(path.src.js)
         .pipe(fileInclude())
         .pipe(uglify())
@@ -133,7 +132,7 @@ function fonts() {
         .pipe(dest(path.build.fonts));
 }
 
-function spritesSVG() { 
+function spritesSVG() {
     return gulp.src(path.src.svgIcons)
         .pipe(svgSprite({
             mode: {
@@ -145,30 +144,11 @@ function spritesSVG() {
         .pipe(dest((path.build.img)));
 }
 
-gulp.task("otf2ttf" , function() {
-    return gulp.src([sourceFolder + "/fonts/*.otf"])
-        .pipe(fonter({
-            formats: ['ttf']
-        }))
-        .pipe(dest(sourceFolder + "/fonts/"));
-});
-
-function watchFiles() {
-    gulp.watch([path.watch.html], html);
-    gulp.watch([path.watch.css], css);
-    gulp.watch([path.watch.js], js);
-    gulp.watch([path.watch.img], img);
-}
-
-function clean() {
-    return del(path.clean);
-}
-
 function favicons() {
     // Переносим в билд манифест
     gulp.src(path.src.favicons.manifest)
         .pipe(dest(path.build.html));
-    
+
     // Оптимизируем и перемещаем SVG-шку
     gulp.src(path.src.favicons.icon)
         .pipe(imagemin())
@@ -183,7 +163,7 @@ function favicons() {
         .pipe(imagemin())
         .pipe(rename('apple-touch-icon.png'))
         .pipe(dest(path.build.html));
-    
+
     // Иконка для google-touch
     return gulp.src(path.src.favicons.icon)
         .pipe(svg2png({
@@ -194,6 +174,25 @@ function favicons() {
         .pipe(rename('google-touch-icon.png'))
         .pipe(dest(path.build.html));
 }
+
+function watchFiles() {
+    gulp.watch([path.watch.html], html);
+    gulp.watch([path.watch.css], css);
+    gulp.watch([path.watch.js], js);
+    gulp.watch([path.watch.img], img);
+}
+
+function clean() {
+    return del(path.clean);
+}
+
+gulp.task("otf2ttf" , function() {
+    return gulp.src([sourceFolder + "/fonts/*.otf"])
+        .pipe(fonter({
+            formats: ['ttf']
+        }))
+        .pipe(dest(sourceFolder + "/fonts/"));
+});
 
 gulp.task('deploy', function() {
     return gulp.src(`${projectFolder}/**/*`)
@@ -207,7 +206,7 @@ exports.favicons  = favicons;
 exports.spritesSVG = spritesSVG;
 exports.fonts = fonts;
 exports.img = img;
-exports.js = js; 
+exports.js = js;
 exports.css = css;
 exports.clean = clean;
 exports.html = html;
