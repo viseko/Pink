@@ -16,12 +16,12 @@ const reviewSlider = new Swiper('.reviews-slider__container', {
 if (document.querySelector('.reviews-slider__container')) {
   reviewSlider.nextBtn = document.querySelector('.reviews-slider__nav-btn--next');
   reviewSlider.prevBtn = document.querySelector('.reviews-slider__nav-btn--prev');
-  
-  reviewSlider.nextBtn.addEventListener("click", function() {
+
+  reviewSlider.nextBtn.addEventListener('click', function() {
     reviewSlider.slideNext();
   });
-  
-  reviewSlider.prevBtn.addEventListener("click", function() {
+
+  reviewSlider.prevBtn.addEventListener('click', function() {
     reviewSlider.slidePrev();
   });
 }

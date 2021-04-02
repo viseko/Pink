@@ -7,7 +7,7 @@
     }
 
     function prepareMap() {
-        mapWrapper.addEventListener("click", loadMap);
+        mapWrapper.addEventListener('click', loadMap);
     }
 
     function loadMap() {
@@ -18,7 +18,7 @@
             mapMessage.innerHTML = 'Загрузка карты..';
 
             const script = document.createElement('script');
-            script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+            script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
 
             document.body.appendChild(script);
 
@@ -44,10 +44,10 @@
     function initMap() {
         mapWrapper.classList.add('map__interactive--init');
 
-        let myMap = new ymaps.Map("map-interactive", {
+        let myMap = new ymaps.Map('map-interactive', {
             center: [59.938635, 30.323118],
             zoom: 17,
-            controls: ["zoomControl"]
+            controls: ['zoomControl']
         });
 
         let myGeoObjects = [];
