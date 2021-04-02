@@ -5,7 +5,10 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp"
+    "build": "gulp build",
+    "dev": "gulp",
+    "stylelint": "stylelint 'source/**/*.scss'",
+    "stylelint:fix": "stylelint 'source/**/*.scss' --fix"
   },
   "author": "viseko23",
   "license": "ISC",
@@ -30,6 +33,8 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
-    "node.normalize.scss": "^3.0.3"
+    "node.normalize.scss": "^3.0.3",
+    "stylelint": "^13.12.0",
+    "stylelint-config-htmlacademy": "^0.1.4"
   }
 }

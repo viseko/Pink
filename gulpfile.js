@@ -44,7 +44,6 @@ const rename = require("gulp-rename");
 const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const webpHTML = require("gulp-webp-html");
 const svgSprite = require("gulp-svg-sprite");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
@@ -66,7 +65,6 @@ function browserSync() {
 function html() {
     return src(path.src.html)
         .pipe(fileInclude())
-        .pipe(webpHTML())
         .pipe(dest(path.build.html))
         .pipe(server.stream());
 }

@@ -17,7 +17,7 @@
   margin: 0;
 
   text-align: center;
-  
+
   user-select: none;
 }
 
@@ -75,7 +75,7 @@
     padding-left: 130px;
     padding-right: 130px;
 
-    background-image: url(../img/svg/brackets.svg);
+    background-image: url("../img/svg/brackets.svg");
     background-repeat: no-repeat;
     background-size: 70px 63px;
     background-position: top center;
@@ -91,6 +91,7 @@
     transform: translateY(-50%);
 
     display: block;
+
     @include size(22px, 42px);
 
     font-size: 0;

@@ -59,7 +59,7 @@
 
     position: absolute;
     left: -30px;
-    top: 0px;
+    top: 0;
 
     padding: 5px;
     width: 100px;
@@ -104,7 +104,7 @@
 
 @media (min-width: $tablet-width) {
   .tariffs-table__wrapper {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .tariffs-table__column {
@@ -146,8 +146,7 @@
     justify-content: center;
   }
 
-  .tariffs-table__column--hideable
-  .tariffs-table__cell {
+  .tariffs-table__column--hideable .tariffs-table__cell {
     justify-content: flex-start;
   }
 

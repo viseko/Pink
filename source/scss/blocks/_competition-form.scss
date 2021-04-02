@@ -44,7 +44,7 @@
 }
 
 .competition-form__fieldset--contacts legend {
-    display: none;
+  display: none;
 }
 
 .competition-form__fieldset--emotions {
@@ -143,7 +143,7 @@
 }
 
 .competition-form__input-box {
-  @extend .visually-hidden;
+  @include visually-hidden;
 
   & + label {
     position: relative;
@@ -228,7 +228,7 @@
 
     @include size(22px, 16px);
 
-    background-image: url(../img/svg/checkbox.svg);
+    background-image: url("../img/svg/checkbox.svg");
   }
 }
 
@@ -338,6 +338,7 @@
     right: 2px;
 
     display: block;
+
     @include size(58px, 56px);
 
     background-color: $cl-gray;

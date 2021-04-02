@@ -6,7 +6,7 @@
   .science {
     display: block;
   }
-  
+
   .science__wrapper {
     position: relative;
 
@@ -29,11 +29,11 @@
       text-align: center;
       line-height: 300px;
 
-      background-image: url(../img/svg/timer.svg);
+      background-image: url("../img/svg/timer.svg");
       background-repeat: no-repeat;
     }
   }
-  
+
   .science__title {
     display: block;
 

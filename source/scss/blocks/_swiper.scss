@@ -9,15 +9,16 @@
   z-index: 1;
   display: flex;
   transition-property: transform;
-  box-sizing: content-box
+  box-sizing: content-box;
 }
 
-.swiper-container-android .swiper-slide,.swiper-wrapper {
-  transform: translate3d(0px,0,0)
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0, 0, 0);
 }
 
 .swiper-container-pointer-events {
-  touch-action: pan-y
+  touch-action: pan-y;
 }
 
 .swiper-slide {
@@ -25,5 +26,5 @@
   width: 100%;
   height: 100%;
   position: relative;
-  transition-property: transform
+  transition-property: transform;
 }

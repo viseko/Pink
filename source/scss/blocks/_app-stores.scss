@@ -34,20 +34,20 @@
     @include size(47px, 56px);
     margin-right: 34px;
 
-    background-image: url(../img/svg/ios-logo.svg);
+    background-image: url("../img/svg/ios-logo.svg");
   }
 
   &--android {
     @include size(43px, 47px);
     margin-right: 37px;
 
-    background-image: url(../img/svg/android-logo.svg);
+    background-image: url("../img/svg/android-logo.svg");
   }
 
   &--windows {
     @include size(44px, 41px);
 
-    background-image: url(../img/svg/windows-logo.svg);
+    background-image: url("../img/svg/windows-logo.svg");
   }
 }
 

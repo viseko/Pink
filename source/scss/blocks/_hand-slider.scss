@@ -25,7 +25,6 @@
   top: 33px;
 
   @include size(111px, 197px);
-  margin: 0 !important; // Swiper.js conflict
 
   background: rgba($cl-pink, 0.9);
 }

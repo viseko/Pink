@@ -1,89 +1,99 @@
 // Common mixins
 
 @mixin font($font-name, $file-name, $weight, $style) {
-    @font-face {
-        font-family: $font-name;
-        font-display: swap;
-        src: url("../fonts/#{$file-name}.woff") format("woff2"),
-            url("../fonts/#{$file-name}.woff") format("woff");
-        font-weight: #{$weight};
-        font-style: #{$style};
-    }
+  @font-face {
+    font-family: $font-name;
+    font-display: swap;
+    src: url("../fonts/#{$file-name}.woff") format("woff2"),
+      url("../fonts/#{$file-name}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 @mixin reset-list {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    list-style: none;
+  list-style: none;
 }
 
 @mixin size($width, $height: $width) {
-    width: $width;
-    height: $height;
+  width: $width;
+  height: $height;
 }
 
 // SVG-borders
 
 @mixin corner($height, $color) {
-    position: relative;
+  position: relative;
 
-    &::after {
-        content: '';
+  &::after {
+    content: "";
 
-        position: absolute;
-        bottom: -$height;
-        left: 0;
+    position: absolute;
+    bottom: -$height;
+    left: 0;
 
-        width: 100%;
-        height: $height;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 320 34'%3E%3Cpath d='M0 0l161.429 34L320 0z' fill='%23#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E");
+    width: 100%;
+    height: $height;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 320 34'%3E%3Cpath d='M0 0l161.429 34L320 0z' fill='%23#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E");
 
-        background-size: 100% $height;
-        background-repeat: no-repeat;
-    }
+    background-size: 100% $height;
+    background-repeat: no-repeat;
+  }
 }
 
 @mixin corner-reverse($height, $color) {
-    position: relative;
+  position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: -$height;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -$height;
 
-        width: 100%;
-        height: $height;
+    width: 100%;
+    height: $height;
 
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 320 34'%3E%3Cpath d='M0 0v34h160zm320 0v34H160z' fill='%23#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-size: 100% $height;
-    }
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 320 34'%3E%3Cpath d='M0 0v34h160zm320 0v34H160z' fill='%23#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% $height;
+  }
 }
 
 @mixin diagonal($height, $color) {
-    position: relative;
+  position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: -$height;
-        left: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -$height;
+    left: 0;
 
-        width: 100%;
-        height: $height;
+    width: 100%;
+    height: $height;
 
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 10 10'%3E%3Cpath fill='none' d='M-1-1h12v12H-1z'/%3E%3Cg%3E%3Cpath d='M0 10h10V0L0 10z' fill='%23#{$color}'/%3E%3C/g%3E%3C/svg%3E");
-        background-size: 100%;
-    }
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 10 10'%3E%3Cpath fill='none' d='M-1-1h12v12H-1z'/%3E%3Cg%3E%3Cpath d='M0 10h10V0L0 10z' fill='%23#{$color}'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100%;
+  }
 }
 
 @mixin retina {
   @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      @content;
-    }
+    @content;
+  }
 }
 
 // Гибкая задание версий фоновой картинки с webp и для retina
@@ -92,16 +102,18 @@
 // "format" - основной формат файла
 @mixin css-background($class, $url, $format) {
   .no-webp #{$class} {
-      background-image: url(#{$url}.#{$format});
-      @include retina {
-          background-image: url(#{$url}@x2.#{$format});
-      }
+    background-image: url(#{$url}.#{$format});
+
+    @include retina {
+      background-image: url(#{$url}@x2.#{$format});
+    }
   }
 
   .webp #{$class} {
-      background-image: url(#{$url}.webp);
-      @include retina {
-          background-image: url(#{$url}@x2.webp);
-      }
+    background-image: url(#{$url}.webp);
+
+    @include retina {
+      background-image: url(#{$url}@x2.webp);
+    }
   }
 }

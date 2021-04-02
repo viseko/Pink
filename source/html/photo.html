@@ -202,7 +202,7 @@
             <source media="(min-width: 960px)" srcset="img/photos/photo-6-desktop.jpg, img/photos/photo-6-desktop@x2.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photos/photo-6-tablet.webp, img/photos/photo-6-tablet@x2.webp 2x" type="image/webp">
             <source media="(min-width: 660px)" srcset="img/photos/photo-6-tablet.jpg, img/photos/photo-6-tablet@x2.jpg 2x">
-            <source srcset="img/photos/photo-6-mobile.webp" type="image/webp">
+            <source srcset="img/photos/photo-6-mobile.webp, img/photos/photo-6-mobile@x2.webp 2x" type="image/webp">
             <img src="img/photos/photo-6-mobile.jpg" srcset="img/photos/photo-6-mobile@x2.jpg 2x" alt="Крыло самолёта">
           </picture>
         </a>
@@ -237,7 +237,7 @@
   </div>
   <form class="post__form photo-post" action="https://echo.htmlacademy.ru" method="POST">
     <div class="photo-post__image-attach-wrapper">
-      <input type="file" name="image" id="image-attach">
+      <input class="photo-post__image-input" type="file" name="image" id="image-attach">
     </div>
     <div class="photo-post__controls-wrapper">
       <div class="photo-post__filters">
@@ -246,36 +246,39 @@
             <svg width="44" height="44">
               <use xlink:href="img/sprite.svg#svg--ico-crop"></use>
             </svg>
+            <span class="visually-hidden">Кадрирование</span>
           </button>
           <button class="photo-post__filter-btn photo-post__filter-btn--fill" type="button">
             <svg width="48" height="43">
               <use xlink:href="img/sprite.svg#svg--ico-fill"></use>
             </svg>
+            <span class="visually-hidden">Заливка</span>
           </button>
           <button class="photo-post__filter-btn photo-post__filter-btn--contrast" type="button">
             <svg width="32" height="32">
               <use xlink:href="img/sprite.svg#svg--ico-contrast"></use>
             </svg>
+            <span class="visually-hidden">Контраст</span>
           </button>
         </div>
         <div class="photo-post__filter-inputs">
-          <div class="photo-post__filter-input photo-post__filter-input--crop photo-post__filter-input--active">
+          <div class="photo-post__filter-input-wrapper photo-post__filter-input-wrapper--crop photo-post__filter-input-wrapper--active">
             <svg class="photo-post__filter-icon" width="22" height="22">
               <use xlink:href="img/sprite.svg#svg--ico-crop"></use>
             </svg>
-            <input type="range" name="crop" id="filter-crop" min="0" max="100" value="80">
+            <input class="photo-post__filter-range" type="range" name="crop" id="filter-crop" min="0" max="100" value="80">
           </div>
-          <div class="photo-post__filter-input photo-post__filter-input--fill">
+          <div class="photo-post__filter-input-wrapper photo-post__filter-input-wrapper--fill">
             <svg class="photo-post__filter-icon" width="24" height="22">
               <use xlink:href="img/sprite.svg#svg--ico-fill"></use>
             </svg>
-            <input type="range" name="fill" id="filter-fill" min="0" max="100" value="20">
+            <input class="photo-post__filter-range" type="range" name="fill" id="filter-fill" min="0" max="100" value="20">
           </div>
-          <div class="photo-post__filter-input photo-post__filter-input--contrast">
+          <div class="photo-post__filter-input-wrapper photo-post__filter-input-wrapper--contrast">
             <svg class="photo-post__filter-icon" width="16" height="16">
               <use xlink:href="img/sprite.svg#svg--ico-contrast"></use>
             </svg>
-            <input type="range" name="contrast" id="filter-contrast" min="0" max="100" value="50">
+            <input class="photo-post__filter-range" type="range" name="contrast" id="filter-contrast" min="0" max="100" value="50">
           </div>
         </div>
       </div>
