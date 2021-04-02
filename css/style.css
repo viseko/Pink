@@ -501,8 +501,7 @@ th {
           box-sizing: inherit;
 }
 
-.visually-hidden,
-.competition-form__input-box {
+.visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0 !important;
@@ -712,8 +711,8 @@ a:active {
 
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
-  -webkit-transform: translate3d(0px, 0, 0);
-          transform: translate3d(0px, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .swiper-container-pointer-events {
@@ -940,20 +939,20 @@ a:active {
   width: 47px;
   height: 56px;
   margin-right: 34px;
-  background-image: url(../img/svg/ios-logo.svg);
+  background-image: url("../img/svg/ios-logo.svg");
 }
 
 .app-stores__link--android {
   width: 43px;
   height: 47px;
   margin-right: 37px;
-  background-image: url(../img/svg/android-logo.svg);
+  background-image: url("../img/svg/android-logo.svg");
 }
 
 .app-stores__link--windows {
   width: 44px;
   height: 41px;
-  background-image: url(../img/svg/windows-logo.svg);
+  background-image: url("../img/svg/windows-logo.svg");
 }
 
 .app-stores__text {
@@ -994,7 +993,6 @@ a:active {
   top: 33px;
   width: 111px;
   height: 197px;
-  margin: 0 !important;
   background: rgba(210, 40, 86, 0.9);
 }
 
@@ -1314,7 +1312,7 @@ a:active {
   content: "Хит";
   position: absolute;
   left: -30px;
-  top: 0px;
+  top: 0;
   padding: 5px;
   width: 100px;
   color: inherit;
@@ -1366,7 +1364,7 @@ a:active {
 }
 
 .contacts::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -33px;
   left: 0;
@@ -1831,7 +1829,7 @@ a:active {
   margin-bottom: 42px;
 }
 
-.photo-post__image-attach-wrapper [type="file"] {
+.photo-post__image-input {
   display: block;
   width: 100%;
   height: 100%;
@@ -1841,15 +1839,15 @@ a:active {
   cursor: pointer;
 }
 
-.photo-post__image-attach-wrapper [type="file"]::-webkit-file-upload-button {
+.photo-post__image-input::-webkit-file-upload-button {
   display: none;
 }
 
-.no-webp .photo-post__image-attach-wrapper [type="file"] {
+.no-webp .photo-post__image-input {
   background-image: url(../img/photos/photo-7-mobile.jpg);
 }
 
-.webp .photo-post__image-attach-wrapper [type="file"] {
+.webp .photo-post__image-input {
   background-image: url(../img/photos/photo-7-mobile.webp);
 }
 
@@ -1935,19 +1933,29 @@ a:active {
   background-color: #dddfe0;
 }
 
-.photo-post__filter-input {
+.photo-post__filter-input-wrapper {
   display: none;
 }
 
-.photo-post__filter-input [type="range"] {
+.photo-post__filter-input-wrapper svg {
+  display: none;
+}
+
+.photo-post__filter-input-wrapper--active {
+  display: block;
+}
+
+.photo-post__filter-range {
   -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 100%;
   height: 10px;
   outline: none;
   background-color: transparent;
 }
 
-.photo-post__filter-input [type="range"]::-webkit-slider-runnable-track {
+.photo-post__filter-range::-webkit-slider-runnable-track {
   width: 100%;
   height: 2px;
   background: transparent;
@@ -1957,12 +1965,13 @@ a:active {
   cursor: pointer;
 }
 
-.photo-post__filter-input [type="range"]:focus::-webkit-slider-runnable-track {
+.photo-post__filter-range:focus::-webkit-slider-runnable-track {
   background-color: #d22856;
 }
 
-.photo-post__filter-input [type="range"]::-webkit-slider-thumb {
+.photo-post__filter-range::-webkit-slider-thumb {
   -webkit-appearance: none;
+          appearance: none;
   width: 14px;
   height: 14px;
   margin-top: -6px;
@@ -1972,16 +1981,8 @@ a:active {
   cursor: pointer;
 }
 
-.photo-post__filter-input [type="range"]::-webkit-slider-thumb:active {
+.photo-post__filter-range::-webkit-slider-thumb:active {
   background-color: #d22856;
-}
-
-.photo-post__filter-input svg {
-  display: none;
-}
-
-.photo-post__filter-input--active {
-  display: block;
 }
 
 .photo-post__buttons {
@@ -2183,6 +2184,16 @@ a:active {
   height: 200px;
 }
 
+.competition-form__input-box {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .competition-form__input-box + label {
   position: relative;
   display: block;
@@ -2255,7 +2266,7 @@ a:active {
   left: 8px;
   width: 22px;
   height: 16px;
-  background-image: url(../img/svg/checkbox.svg);
+  background-image: url("../img/svg/checkbox.svg");
 }
 
 .competition-form__submit-btn {
@@ -2527,7 +2538,7 @@ a:active {
         -ms-transform: unset;
             transform: unset;
     left: unset;
-    right: 0px;
+    right: 0;
   }
 
   .page-header__content-wrapper {
@@ -2559,7 +2570,7 @@ a:active {
   }
 
   .page-header__download {
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   .page-header--inner {
@@ -2657,7 +2668,7 @@ a:active {
   }
 
   .advantages__intro p {
-    margin: 0px;
+    margin: 0;
   }
 
   .advantages__wrapper {
@@ -2694,11 +2705,11 @@ a:active {
   }
 
   .webp .advantages__list::before {
-    background-image: url(../img/advantages/iphone-screen3@x2.webp);
+    background-image: url("../img/advantages/iphone-screen3@x2.webp");
   }
 
   .no-webp .advantages__list::before {
-    background-image: url(../img/advantages/iphone-screen3@x2.png);
+    background-image: url("../img/advantages/iphone-screen3@x2.png");
   }
 
   .advantages__item {
@@ -2732,7 +2743,7 @@ a:active {
     font-weight: bold;
     text-align: center;
     line-height: 300px;
-    background-image: url(../img/svg/timer.svg);
+    background-image: url("../img/svg/timer.svg");
     background-repeat: no-repeat;
   }
 
@@ -2789,7 +2800,7 @@ a:active {
   }
 
   .tariffs-table__wrapper {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .tariffs-table__column {
@@ -2849,7 +2860,7 @@ a:active {
   }
 
   .contacts::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -70px;
     left: 0;
@@ -3023,11 +3034,11 @@ a:active {
     margin-right: 47px;
   }
 
-  .no-webp .photo-post__image-attach-wrapper [type="file"] {
+  .no-webp .photo-post__image-input {
     background-image: url(../img/photos/photo-7-tablet.jpg);
   }
 
-  .webp .photo-post__image-attach-wrapper [type="file"] {
+  .webp .photo-post__image-input {
     background-image: url(../img/photos/photo-7-tablet.webp);
   }
 
@@ -3327,11 +3338,11 @@ a:active {
     background-image: url(../img/screens/desktop-screen-3@x2.webp);
   }
 
-  .no-webp .photo-post__image-attach-wrapper [type="file"] {
+  .no-webp .photo-post__image-input {
     background-image: url(../img/photos/photo-7-tablet@x2.jpg);
   }
 
-  .webp .photo-post__image-attach-wrapper [type="file"] {
+  .webp .photo-post__image-input {
     background-image: url(../img/photos/photo-7-tablet@x2.webp);
   }
 }
@@ -3478,7 +3489,7 @@ a:active {
   }
 
   .advantages__intro p {
-    margin: 0px;
+    margin: 0;
   }
 
   .advantages__wrapper::before {
@@ -3541,11 +3552,11 @@ a:active {
   }
 
   .no-webp .advantages__item::before {
-    background-image: url(../img/iphone.png), url(../img/advantages/adv-border.png);
+    background-image: url("../img/iphone.png"), url("../img/advantages/adv-border.png");
   }
 
   .webp .advantages__item::before {
-    background-image: url(../img/iphone.webp), url(../img/advantages/adv-border.webp);
+    background-image: url("../img/iphone.webp"), url("../img/advantages/adv-border.webp");
   }
 
   .no-webp .advantages__item--mood::after {
@@ -3610,7 +3621,7 @@ a:active {
     padding-top: 117px;
     padding-left: 130px;
     padding-right: 130px;
-    background-image: url(../img/svg/brackets.svg);
+    background-image: url("../img/svg/brackets.svg");
     background-repeat: no-repeat;
     background-size: 70px 63px;
     background-position: top center;
@@ -3691,7 +3702,7 @@ a:active {
   }
 
   .contacts::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -100px;
     left: 0;
@@ -3998,11 +4009,11 @@ a:active {
   }
 
   .no-webp .advantages__item::before {
-    background-image: url(../img/iphone@x2.png), url(../img/advantages/adv-border.png);
+    background-image: url("../img/iphone@x2.png"), url("../img/advantages/adv-border.png");
   }
 
   .webp .advantages__item::before {
-    background-image: url(../img/iphone@x2.webp), url(../img/advantages/adv-border.webp);
+    background-image: url("../img/iphone@x2.webp"), url("../img/advantages/adv-border.webp");
   }
 
   .no-webp .advantages__item--mood::after {
@@ -4055,7 +4066,7 @@ a:active {
     overflow: hidden;
     background-color: #283645;
     top: 100%;
-    left: 0px;
+    left: 0;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
@@ -4153,11 +4164,11 @@ a:active {
     background-image: url(../img/advantages/iphone-screen3@x2.webp);
   }
 
-  .no-webp .photo-post__image-attach-wrapper [type="file"] {
+  .no-webp .photo-post__image-input {
     background-image: url(../img/photos/photo-7-mobile@x2.jpg);
   }
 
-  .webp .photo-post__image-attach-wrapper [type="file"] {
+  .webp .photo-post__image-input {
     background-image: url(../img/photos/photo-7-mobile@x2.webp);
   }
 }

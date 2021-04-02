@@ -50,12 +50,12 @@ const reviewSlider = new Swiper('.reviews-slider__container', {
 if (document.querySelector('.reviews-slider__container')) {
   reviewSlider.nextBtn = document.querySelector('.reviews-slider__nav-btn--next');
   reviewSlider.prevBtn = document.querySelector('.reviews-slider__nav-btn--prev');
-  
-  reviewSlider.nextBtn.addEventListener("click", function() {
+
+  reviewSlider.nextBtn.addEventListener('click', function() {
     reviewSlider.slideNext();
   });
-  
-  reviewSlider.prevBtn.addEventListener("click", function() {
+
+  reviewSlider.prevBtn.addEventListener('click', function() {
     reviewSlider.slidePrev();
   });
 }
@@ -116,7 +116,7 @@ if (document.querySelector('.reviews-slider__container')) {
     }
 
     function prepareMap() {
-        mapWrapper.addEventListener("click", loadMap);
+        mapWrapper.addEventListener('click', loadMap);
     }
 
     function loadMap() {
@@ -127,7 +127,7 @@ if (document.querySelector('.reviews-slider__container')) {
             mapMessage.innerHTML = 'Загрузка карты..';
 
             const script = document.createElement('script');
-            script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+            script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
 
             document.body.appendChild(script);
 
@@ -153,10 +153,10 @@ if (document.querySelector('.reviews-slider__container')) {
     function initMap() {
         mapWrapper.classList.add('map__interactive--init');
 
-        let myMap = new ymaps.Map("map-interactive", {
+        let myMap = new ymaps.Map('map-interactive', {
             center: [59.938635, 30.323118],
             zoom: 17,
-            controls: ["zoomControl"]
+            controls: ['zoomControl']
         });
 
         let myGeoObjects = [];
