@@ -213,15 +213,15 @@ if (document.querySelector('.reviews-slider__container')) {
       scales: [
         {
           name: 'crop',
-          el: document.querySelector('.photo-post__filter-input--crop')
+          el: document.querySelector('.photo-post__filter-input-wrapper--crop')
         },
         {
           name: 'fill',
-          el: document.querySelector('.photo-post__filter-input--fill')
+          el: document.querySelector('.photo-post__filter-input-wrapper--fill')
         },
         {
           name: 'contrast',
-          el: document.querySelector('.photo-post__filter-input--contrast')
+          el: document.querySelector('.photo-post__filter-input-wrapper--contrast')
         }
       ]
     };
@@ -245,7 +245,7 @@ if (document.querySelector('.reviews-slider__container')) {
 
     function activateTab(targetTab, currentBtn) {
       let activeBtnClass = 'photo-post__filter-btn--active',
-        activeTabClass = 'photo-post__filter-input--active'
+        activeTabClass = 'photo-post__filter-input-wrapper--active'
 
       let activeBtn = document.querySelector(`.${activeBtnClass}`),
         activeTab = document.querySelector(`.${activeTabClass}`);
@@ -258,7 +258,8 @@ if (document.querySelector('.reviews-slider__container')) {
     }
   }
 
-})();;
+})();
+;
 
 // Скрипт для валидации и отправки формы на странице form.html
 const

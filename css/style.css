@@ -1248,6 +1248,10 @@ a:active {
   background-size: 100%;
 }
 
+.tariffs__wrapper {
+  padding: 0;
+}
+
 .tariffs-table {
   position: relative;
   overflow: hidden;
@@ -2799,6 +2803,10 @@ a:active {
     height: 50px;
   }
 
+  .tariffs__wrapper {
+    padding: 0 20px;
+  }
+
   .tariffs-table__wrapper {
     margin-bottom: 0;
   }
@@ -3056,7 +3064,7 @@ a:active {
     display: none;
   }
 
-  .photo-post__filter-input {
+  .photo-post__filter-input-wrapper {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3069,22 +3077,22 @@ a:active {
     border-bottom: 1px solid rgba(40, 54, 69, 0.1);
   }
 
-  .photo-post__filter-input:first-child {
+  .photo-post__filter-input-wrapper:first-child {
     padding-top: 10px;
   }
 
-  .photo-post__filter-input svg {
+  .photo-post__filter-input-wrapper svg {
     position: absolute;
     left: 0;
     display: block;
     fill: #d22856;
   }
 
-  .photo-post__filter-input--fill svg {
+  .photo-post__filter-input-wrapper--fill svg {
     left: 2px;
   }
 
-  .photo-post__filter-input--contrast svg {
+  .photo-post__filter-input-wrapper--contrast svg {
     left: 6px;
   }
 
@@ -3686,6 +3694,10 @@ a:active {
     height: 90px;
   }
 
+  .tariffs__wrapper {
+    padding: 0 10px;
+  }
+
   .tariffs-table__head h3 {
     margin-bottom: 5px;
     font-size: 18px;
@@ -3806,22 +3818,22 @@ a:active {
     padding: 0;
   }
 
-  .photo-post__filter-input {
+  .photo-post__filter-input-wrapper {
     padding-left: 90px;
     padding-right: 30px;
   }
 
-  .photo-post__filter-input--crop svg {
+  .photo-post__filter-input-wrapper--crop svg {
     width: 44px;
     height: 44px;
   }
 
-  .photo-post__filter-input--fill svg {
+  .photo-post__filter-input-wrapper--fill svg {
     width: 48px;
     height: 43px;
   }
 
-  .photo-post__filter-input--contrast svg {
+  .photo-post__filter-input-wrapper--contrast svg {
     width: 32px;
     height: 32px;
   }
