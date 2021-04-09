@@ -7,6 +7,10 @@
   background-color: #f2f2f2;
 }
 
+.tariffs__wrapper {
+  padding: 0;
+}
+
 @media (min-width: $tablet-width) {
   .tariffs {
     padding-top: 36px;
@@ -16,6 +20,10 @@
       top: -50px;
       height: 50px;
     }
+  }
+
+  .tariffs__wrapper {
+    padding: 0 20px;
   }
 }
 
@@ -28,5 +36,9 @@
       top: -90px;
       height: 90px;
     }
+  }
+
+  .tariffs__wrapper {
+    padding: 0 10px;
   }
 }
